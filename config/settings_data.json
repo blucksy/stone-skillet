@@ -23,21 +23,18 @@
           "image_WjMHcy": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/001-olivia-reading.png",
               "caption": "Caption 1"
             }
           },
           "image_Ua7zHY": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/004zzzwhitneyreview_swissinst_shotbylacruz-66.jpg",
               "caption": "Caption whatever"
             }
           },
           "image_Lg7NqD": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/001-z20241012_whitneyreview_cdg-15_1.jpg",
               "caption": "Caption XYZ"
             }
           }
@@ -93,64 +90,64 @@
           "credit_wFUTmd": {
             "type": "credit",
             "settings": {
-              "text": "Whitney Mallett ",
               "role": "Founding Editor",
+              "text": "Whitney Mallett ",
               "link": ""
             }
           },
           "credit_rJx4qY": {
             "type": "credit",
             "settings": {
-              "text": "Immanuel Yang",
               "role": "Art Director",
+              "text": "Immanuel Yang",
               "link": ""
             }
           },
           "credit_gjtacD": {
             "type": "credit",
             "settings": {
-              "text": "Michael Bullock",
               "role": "Associate Publisher",
+              "text": "Michael Bullock",
               "link": ""
             }
           },
           "credit_KbbmfK": {
             "type": "credit",
             "settings": {
-              "text": "Mekala Rajagopal ",
               "role": "Executive Editor",
+              "text": "Mekala Rajagopal ",
               "link": ""
             }
           },
           "credit_tQzYAm": {
             "type": "credit",
             "settings": {
-              "text": "Morgan Becker ",
               "role": "Senior Editor",
+              "text": "Morgan Becker ",
               "link": ""
             }
           },
           "credit_FEWkjK": {
             "type": "credit",
             "settings": {
-              "text": "Fabiana Lacau",
               "role": "Associate Editor",
+              "text": "Fabiana Lacau",
               "link": ""
             }
           },
           "credit_Hyt9WU": {
             "type": "credit",
             "settings": {
-              "text": "Fern Paltrow",
               "role": "Editorial Assistant",
+              "text": "Fern Paltrow",
               "link": ""
             }
           },
           "credit_XR8UXQ": {
             "type": "credit",
             "settings": {
-              "text": "Ariel Friedman",
               "role": "Editorial Assistant",
+              "text": "Ariel Friedman",
               "link": ""
             }
           }
@@ -168,6 +165,43 @@
         "settings": {
           "about": "The Whitney Review of New Writing is an independent journal of literary criticism based in New York City. Each issue features interviews, essays, poetry, and more than seventy short-format reviews—a laboratory for sharp, pithy writing that experiments with new modes of criticism. \n\nAt once a place of discovery, guiding readers toward their next book, it also stands as a record of the zeitgeist, connecting a culture of reading to interdisciplinary perspectives in art, design, performance, music, nightlife, and fashion.\n\nThe criticism engages writing in radically different formats, from major houses and micro presses to advertising copy and spoken-word performance, offering both support and context for the literary ecosystem.\n\nPrevious contributors include Dennis Cooper, Mary Gaitskill, Claudia Rankine, Alissa Bennett, Honey Dijon, K8 Hardy, Rhea Dillon, Diamond Stingily, Hedi El Kholti, Natasha Stagg, Rayne Fisher-Quann, Samuel R. Delany, E. Jane, Maya Martinez, Grace Byron, Tao Lin, and many others.\n\n39 West 29 Street, #620, New York, NY 10001"
         }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "hero_title": "Freshly Baked Muffins Delivered to Your Doorstep",
+          "instacart_link": ""
+        }
+      },
+      "flavors": {
+        "type": "flavors",
+        "blocks": {
+          "flavor_rfhYeq": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Cinnamon_Raisin.jpg",
+              "bg_color": "#aa3cc7",
+              "title": "Cinnamon Raisin",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Raisins, Wheat  Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Cinnamon,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
+            }
+          },
+          "flavor_4tXXgE": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Everything.jpg",
+              "bg_color": "",
+              "title": "Everything",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Natural Enzymes (Wheat  Flour, Enzymes), Garlic, Onion, Poppy Seeds, Canola Oil (Expeller Pressed)."
+            }
+          }
+        },
+        "block_order": [
+          "flavor_rfhYeq",
+          "flavor_4tXXgE"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": []
