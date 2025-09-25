@@ -12,17 +12,37 @@
   font-display: swap;
 }
 
-/* define vairbale color */
-:root {
-  --skilletBlue: #c5e0f2;
+.heading {
+  font-family: "Baton Nouveau", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 103%;
+  letter-spacing: -0.03em;
 }
 
-.baton-large {
+.subheading {
   font-family: "Baton Nouveau", sans-serif;
-  line-height: 103%; /* 43.26px */
-  letter-spacing: -1.26px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 103%;
+  letter-spacing: -0.03em;
 }
+
 .button {
   font-family: "Baton Nouveau", sans-serif;
-  @apply border rounded-full px-3 py-2 border-black whitespace-nowrap;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  @apply border rounded-full px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
+}
+
+.px-page {
+  @apply px-[36px];
+}
+
+.main-grid {
+  @apply grid grid-cols-12 gap-[36px];
 }
