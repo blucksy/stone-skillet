@@ -27,14 +27,6 @@
         <div class="col-span-5">
           {% render 'pairing', title: 'Books Reviewed', text: main_issue.books %}
         </div>
-
-        <div class="col-span-full lg:col-span-11  ">
-          <button
-            class="credit border-white text-center h-[72px] border w-full hover:bg-white hover:text-black transition-colors"
-            onclick="document.querySelector('subscribe-helper').subscribe()">
-            Subscribe to The Whitney Review for $10 Bianually
-          </button>
-        </div>
       </div>
     </div>
   </div>
@@ -46,24 +38,26 @@
   </div>
   <div class="main-grid gap-[12px]">
     {% for issue in metaobjects.issue.values reversed %}
-    {% unless issue.number == main_issue.number %}
-    <div class="flex flex-col gap-[15px] col-span-4">
-      {% render 'image', image: issue.cover %}
-      <p class="secondary">
-        {{ issue.season }}
-        <br>
-        Issue {{ issue.number }}
-      </p>
+      {% unless issue.number == main_issue.number %}
+        <div class="flex flex-col gap-[15px] col-span-4">
+          {% render 'image', image: issue.cover %}
+          <p class="secondary">
+            {{ issue.season }}
+            <br>
+            Issue {{ issue.number }}
+          </p>
 
-      {% render 'pairing', title: "Editor's Note", text: issue.note, uppercase: true %}
-      {% render 'pairing', title: 'Featured Interviews', text: issue.interviews %}
-      {% render 'pairing', title: 'Books Reviewed', text: issue.books %}
-      {% render 'pairing', title: 'Contributors', text: issue.contributors %}
-    </div>
-    {% endunless %}
+          {% render 'pairing', title: "Editor's Note", text: issue.note, uppercase: true %}
+          {% render 'pairing', title: 'Featured Interviews', text: issue.interviews %}
+          {% render 'pairing', title: 'Books Reviewed', text: issue.books %}
+          {% render 'pairing', title: 'Contributors', text: issue.contributors %}
+        </div>
+      {% endunless %}
     {% endfor %}
   </div>
 </div>
+
+{% section 'hero' %}
 
 {% section 'media' %}
 
