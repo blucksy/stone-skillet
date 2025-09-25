@@ -558,8 +558,28 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.left-10 {
+  left: 2.5rem;
+}
+
+.right-\[-20px\] {
+  right: -20px;
+}
+
+.top-\[-20px\] {
+  top: -20px;
 }
 
 .top-\[18px\] {
@@ -650,6 +670,10 @@ video {
   height: 512px;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -663,12 +687,29 @@ video {
   width: 140px;
 }
 
+.w-\[50px\] {
+  width: 50px;
+}
+
+.w-\[60vw\] {
+  width: 60vw;
+}
+
 .w-\[calc\(\(100vw-12px\*20\)\/19\*5\+4\*12px\)\] {
   width: calc((100vw - 12px * 20) / 19 * 5 + 4 * 12px);
 }
 
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .w-screen {
   width: 100vw;
+}
+
+.max-w-\[482px\] {
+  max-width: 482px;
 }
 
 .cursor-pointer {
@@ -699,6 +740,10 @@ video {
   gap: 14px;
 }
 
+.gap-\[18px\] {
+  gap: 18px;
+}
+
 .gap-\[24px\] {
   gap: 24px;
 }
@@ -713,6 +758,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .whitespace-pre-line {
@@ -732,9 +781,24 @@ video {
   background-color: rgb(197 224 242 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.px-\[12px\] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .px-\[18px\] {
   padding-left: 18px;
   padding-right: 18px;
+}
+
+.py-\[18px\] {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .py-\[24px\] {
@@ -796,6 +860,22 @@ body {
   font-size: 15px;
   line-height: 134%;
   letter-spacing: 0.02em;
+}
+
+/* rotate class is a rotating animation */
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .text-heading {
@@ -867,16 +947,8 @@ body {
   cursor: default;
 }
 
-.aria-pressed\:opacity-100[aria-pressed="true"] {
-  opacity: 1;
-}
-
 .aria-pressed\:\!opacity-100[aria-pressed="true"] {
   opacity: 1 !important;
-}
-
-.aria-selected\:opacity-100[aria-selected="true"] {
-  opacity: 1;
 }
 
 @media (min-width: 640px) {

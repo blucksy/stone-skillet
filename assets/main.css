@@ -21,6 +21,20 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* rotate class is a rotating animation */
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .text-heading {
   font-family: "Baton Nouveau", sans-serif;
   font-style: normal;

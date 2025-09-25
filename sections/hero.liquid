@@ -1,12 +1,12 @@
-<div class=" mt-[45px]">
-  <div class="mb-[15px] px-page">
-    {% render 'heading', title: 'Media' %}
+<div class="mt-[45px] flex flex-row h-[80vh] overflow-x-scroll w-screen" id="marquee">
+  {% for block in section.blocks %}
+    {% render 'image', image: block.settings.image, class: 'w-[60vw]' %}
+  {% endfor %}
+  <div class="bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] absolute left-10 bottom-10 max-w-[482px]">
+    <h3 class="text-heading">{{ section.settings.hero_title }}</h3>
+    <a href="{{ section.settings.instacart_link }}" class="button !hidden sm:!flex bg-white w-min">Order on</a>
+    <img src="{{ 'hand-griddled.png' | asset_url }}" class="absolute w-[50px] top-[-20px] rotate right-[-20px]">
   </div>
-  <swiper-gallery class="overflow-x-hidden *:!px-[12px]">
-    {% for block in section.blocks %}
-      {% render 'image', image: block.settings.image, class: 'h-[512px]' %}
-    {% endfor %}
-  </swiper-gallery>
 </div>
 
 {% schema %}
