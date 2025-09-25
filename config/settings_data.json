@@ -168,6 +168,80 @@
       },
       "hero": {
         "type": "hero",
+        "blocks": {
+          "image_CNXdjY": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Cinnamon_Raisin_6a6646fe-2db1-41e0-8917-1542eaf27ed0.jpg"
+            }
+          },
+          "image_whCKA6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Everything_c6681b54-6b87-4aee-b2fc-c13f7813cfd5.jpg"
+            }
+          },
+          "image_LnHxMC": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/French_Toast_732629c3-a546-4924-8799-f28a96de22e8.jpg"
+            }
+          },
+          "image_8NQycV": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Lemon_Blueberry_a4424bb0-7640-4850-9f8b-98fcfe5c26be.jpg"
+            }
+          },
+          "image_ecnjQQ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Orange_Cranberry_d6cc1999-66fe-4050-af79-c1ee17eb9a6d.jpg"
+            }
+          },
+          "image_HVQTFj": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Original_08decff5-64d3-4b7f-9d84-2d16ab1bd171.jpg"
+            }
+          },
+          "image_ihikKf": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Roasted_Herb___Garlic_3f5f8a8a-496f-42e5-b6be-7e5ce8dbcb2b.jpg"
+            }
+          },
+          "image_bVEYgU": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Stuffin_Muffin_c6090996-ffb1-46f7-951c-d8f85afaff48.jpg"
+            }
+          },
+          "image_NmDnBt": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Super_Grains_3b23b9af-285d-417a-aa7c-6510fd29bd8d.jpg"
+            }
+          },
+          "image_YigR77": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Wheat_c0000790-6e3d-4c75-adaa-03a061da4267.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "image_CNXdjY",
+          "image_whCKA6",
+          "image_LnHxMC",
+          "image_8NQycV",
+          "image_ecnjQQ",
+          "image_HVQTFj",
+          "image_ihikKf",
+          "image_bVEYgU",
+          "image_NmDnBt",
+          "image_YigR77"
+        ],
         "settings": {
           "hero_title": "Freshly Baked Muffins Delivered to Your Doorstep",
           "instacart_link": ""
