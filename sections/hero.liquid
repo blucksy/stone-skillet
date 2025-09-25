@@ -1,13 +1,32 @@
-<div class="mt-[45px] flex flex-row h-[90vh] overflow-x-scroll w-screen" id="marquee">
-  {% for block in section.blocks %}
-    {% render 'image', image: block.settings.image, class: 'h-[80vh]' %}
-  {% endfor %}
+<div class="mt-[45px] flex flex-row h-[90vh] overflow-x-scroll w-screen">
+  <div class="flex flex-row " id="marquee">
+    {% for block in section.blocks %}
+      {% render 'image', image: block.settings.image, class: 'h-[80vh] object-cover' %}
+    {% endfor %}
+  </div>
   <div class="bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] absolute left-10 bottom-10 max-w-[482px]">
     <h3 class="text-heading">{{ section.settings.hero_title }}</h3>
     <a href="{{ section.settings.instacart_link }}" class="button !hidden sm:!flex bg-white w-min">Order on</a>
     <img src="{{ 'hand-griddled.png' | asset_url }}" class="absolute w-[50px] top-[-20px] rotate right-[-20px]">
   </div>
 </div>
+<script>
+  const marquee = document.getElementById('marquee');
+  const speed = 0.5; // Adjust the speed as needed
+
+  let posX = 0;
+
+  function animate() {
+    posX -= speed;
+    if (posX <= -marquee.scrollWidth / 2) {
+      posX = 0;
+    }
+    marquee.style.transform = `translateX(${posX}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
 
 {% schema %}
 {
