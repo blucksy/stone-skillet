@@ -1,11 +1,11 @@
-<div class="h-[90vh] relative">
+<div class="h-[90vh] relative ">
   <img
     src="{{ section.settings.quote_image | img_url: 'master' }}"
     alt="Quote Image"
     class="h-full w-full object-cover"
   >
   {% if section.settings.caption %}
-    <p class="my-auto h-full flex text-heading top-0 left-0  absolute text-white italic ">
+    <p class="my-auto mx-auto top-0 justify-center text-center bottom-0 h-min flex text-heading  ">
       {{ section.settings.caption }}
     </p>
   {% endif %}
