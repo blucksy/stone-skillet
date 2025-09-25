@@ -582,6 +582,14 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -640,6 +648,11 @@ video {
 
 .col-start-9 {
   grid-column-start: 9;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mb-\[15px\] {
