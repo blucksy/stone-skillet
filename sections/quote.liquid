@@ -1,0 +1,31 @@
+<div>
+  <img src="{{ section.settings.quote_image | img_url: 'master' }}" alt="Quote Image" class="w-full h-auto">
+  {% if section.settings.caption %}
+    <p class="mt-4 text-center italic text-sm text-gray-600">{{ section.settings.caption }}</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "quote",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "quote_image",
+      "label": "Quote Image"
+    },
+
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
