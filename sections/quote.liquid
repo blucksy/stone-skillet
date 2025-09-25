@@ -5,9 +5,11 @@
     class="h-full w-full object-cover"
   >
   {% if section.settings.caption %}
-    <p class="my-auto mx-auto absolute mx-auto top-0 justify-center text-center bottom-0 h-min flex text-heading  ">
-      {{ section.settings.caption }}
-    </p>
+    <div class="flex content-center absolute w-full h-full left-0 top-0">
+      <p class="my-auto w-2/3 z text-white mx-auto text-center flex text-heading  ">
+        {{ section.settings.caption }}
+      </p>
+    </div>
   {% endif %}
 </div>
 
