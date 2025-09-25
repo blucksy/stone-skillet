@@ -12,7 +12,16 @@
   font-display: swap;
 }
 
-.heading {
+body {
+  font-family: "IBM Plex Serif", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 134%;
+  letter-spacing: 0.02em;
+}
+
+.text-heading {
   font-family: "Baton Nouveau", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -21,7 +30,7 @@
   letter-spacing: -0.03em;
 }
 
-.subheading {
+.text-secondary {
   font-family: "Baton Nouveau", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -36,7 +45,7 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: -0.03em;
-  @apply border rounded-full px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
+  @apply border rounded px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
 }
 
 .px-page {
@@ -45,4 +54,8 @@
 
 .main-grid {
   @apply grid grid-cols-12 gap-[36px];
+}
+
+.dotted {
+  border: 1px dashed #000000;
 }

@@ -21,6 +21,9 @@ const tailwindConfig = {
       colors: {
         skillet: "#c5e0f2",
       },
+      borderRadius: {
+        DEFAULT: "12px",
+      },
     },
   },
 };
