@@ -21,8 +21,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* rotate class is a rotating animation */
-
 .rotate {
   animation: rotation 20s infinite linear;
 }
@@ -42,6 +40,10 @@ body {
   font-size: 38px;
   line-height: 103%;
   letter-spacing: -0.03em;
+}
+
+.swiper-slide {
+  @apply child:h-full child:object-cover md:my-auto;
 }
 
 .text-secondary {

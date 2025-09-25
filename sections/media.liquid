@@ -1,10 +1,28 @@
-<div class=" mt-[45px]">
-  <div class="mb-[15px] px-page">
-    {% render 'heading', title: 'Media' %}
-  </div>
-  <swiper-gallery class="overflow-x-hidden *:!px-[12px]">
+<div>
+  <h3 class="text-heading px-9 pb-9">the dynamic muffin</h3>
+  <swiper-gallery data-gap="32px" class="overflow-x-hidden *:!px-[12px]">
     {% for block in section.blocks %}
-      {% render 'image', image: block.settings.image, class: 'h-[512px]' %}
+      <div class="w-[30vw] swiper-slide border-gray-200 rounded-lg overflow-hidden flex flex-col  h-[512px] ">
+        {% if block.settings.image %}
+          <img
+            src="{{ block.settings.image | img_url: 'medium' }}"
+            alt="{{ block.settings.caption | escape }}"
+            class="dotted rounded"
+          >
+          <div>
+            {% if block.settings.caption %}
+              <p class="text-sm text-gray-600 mt-2">{{ block.settings.caption }}</p>
+            {% endif %}
+            {% if block.settings.username and block.settings.username_link %}
+              <a
+                href="{{ block.settings.username_link }}"
+              >
+                {{ block.settings.username }}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
     {% endfor %}
   </swiper-gallery>
 </div>
