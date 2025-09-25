@@ -12,8 +12,18 @@
 {% schema %}
 {
   "name": "Hero",
-  "settings": [],
-
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Related Product"
+    }
+  ],
   "blocks": [
     {
       "type": "image",
@@ -23,11 +33,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "caption",
-          "label": "Caption"
         }
       ]
     }
