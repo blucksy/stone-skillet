@@ -364,6 +364,13 @@
           "flavor_dT7XPk"
         ],
         "settings": {}
+      },
+      "quote": {
+        "type": "quote",
+        "settings": {
+          "quote_image": "shopify://shop_images/Frame_1.png",
+          "caption": "Hello my name is jeff"
+        }
       }
     },
     "content_for_index": []
