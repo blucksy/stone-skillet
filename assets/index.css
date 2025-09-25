@@ -606,6 +606,18 @@ video {
   top: 18px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -713,6 +725,14 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.h-\[60vh\] {
+  height: 60vh;
+}
+
+.h-\[66vh\] {
+  height: 66vh;
 }
 
 .w-1\/2 {
@@ -884,6 +904,11 @@ video {
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .opacity-50 {

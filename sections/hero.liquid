@@ -1,6 +1,6 @@
 <div class="mt-[45px] flex flex-row h-[90vh] overflow-x-scroll w-screen" id="marquee">
   {% for block in section.blocks %}
-    {% render 'image', image: block.settings.image, class: 'w-[60vw]' %}
+    {% render 'image', image: block.settings.image, class: 'h-[80vh]' %}
   {% endfor %}
   <div class="bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] absolute left-10 bottom-10 max-w-[482px]">
     <h3 class="text-heading">{{ section.settings.hero_title }}</h3>

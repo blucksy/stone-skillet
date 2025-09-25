@@ -1,7 +1,13 @@
-<div>
-  <img src="{{ section.settings.quote_image | img_url: 'master' }}" alt="Quote Image" class="w-full h-auto">
+<div class="h-[90vh] block">
+  <img
+    src="{{ section.settings.quote_image | img_url: 'master' }}"
+    alt="Quote Image"
+    class="h-full w-full object-cover"
+  >
   {% if section.settings.caption %}
-    <p class="mt-4 text-center italic text-sm text-gray-600">{{ section.settings.caption }}</p>
+    <p class="mt-4 text-heading text-center absolute top-0 bottom-0 left-0 right-0 text-white italic text-sm">
+      {{ section.settings.caption }}
+    </p>
   {% endif %}
 </div>
 
@@ -16,7 +22,7 @@
     },
 
     {
-      "type": "text",
+      "type": "textarea",
       "id": "caption",
       "label": "Caption"
     }
