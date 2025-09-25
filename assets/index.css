@@ -554,6 +554,46 @@ video {
   display: none;
 }
 
+.aspect-h-1 {
+  --tw-aspect-h: 1;
+}
+
+.aspect-w-1 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 1;
+}
+
+.aspect-w-1 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.aspect-h-10 {
+  --tw-aspect-h: 10;
+}
+
+.aspect-w-9 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 9;
+}
+
+.aspect-w-9 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .fixed {
   position: fixed;
 }
@@ -655,6 +695,10 @@ video {
   height: fit-content;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -669,6 +713,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .cursor-pointer {
@@ -689,6 +737,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -730,6 +782,11 @@ video {
 .bg-skillet {
   --tw-bg-opacity: 1;
   background-color: rgb(197 224 242 / var(--tw-bg-opacity, 1));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .px-\[18px\] {
@@ -775,6 +832,16 @@ video {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 @font-face {
@@ -861,6 +928,14 @@ body {
   .hover\:opacity-75:hover {
     opacity: 0.75;
   }
+}
+
+.aria-checked\:cursor-default[aria-checked="true"] {
+  cursor: default;
+}
+
+.aria-checked\:\!opacity-100[aria-checked="true"] {
+  opacity: 1 !important;
 }
 
 .aria-pressed\:cursor-default[aria-pressed="true"] {

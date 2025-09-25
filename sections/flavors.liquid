@@ -1,88 +1,140 @@
 <div class="hidden md:grid px-page main-grid">
   {% assign half = section.blocks.size | divided_by: 2 %}
 
-  <div class="col-start-2 col-span-3 flex flex-wrap gap-y-[12px]  h-fit">
+  <div class="col-start-2 col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
     {% for block in section.blocks limit: half %}
       <flavor-picker
-        aria-role="button"
-        class="aria-pressed:!opacity-100 hover:opacity-75 aria-pressed:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit"
-        aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}"
+        role="radio"
+        class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit"
+        aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
         data-title="{{ block.settings.title }}"
         data-description="{{ block.settings.description }}"
         data-ingredients="{{ block.settings.ingredients }}"
+        data-color="{{ block.settings.bg_color }}"
       >
-        {% render 'image', image: block.settings.image %}
+        <div class="aspect-w-9 aspect-h-10">
+          {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
+        </div>
       </flavor-picker>
     {% endfor %}
   </div>
 
-  <div id="flavor" class="col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center">
-    {% render 'image',
-      image: section.blocks[0].settings.image,
-      alt: section.blocks[0].settings.title,
-      class: 'dotted rounded-[6px]'
-    %}
+  <div
+    id="flavor"
+    class="col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center transition-colors"
+  >
+    <div class="aspect-w-9 aspect-h-10">
+      {% render 'image',
+        image: section.blocks[0].settings.image,
+        alt: section.blocks[0].settings.title,
+        class: 'dotted rounded-[6px] h-full w-full object-cover'
+      %}
+    </div>
     <p class="text-secondary" data-flavor-title>{{ section.blocks[0].settings.title }}</p>
     <p data-flavor-description>{{ section.blocks[0].settings.description }}</p>
     <p data-flavor-ingredients>{{ section.blocks[0].settings.ingredients }}</p>
   </div>
 
-  <div class="col-span-3 flex flex-wrap gap-y-[12px]  h-fit">
+  <div class="col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
     {% for block in section.blocks offset: half %}
       <flavor-picker
-        aria-role="button"
-        class="aria-pressed:!opacity-100 hover:opacity-75 aria-pressed:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit"
-        aria-pressed="false"
+        role="button"
+        class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit "
+        aria-checked="false"
         data-title="{{ block.settings.title }}"
         data-description="{{ block.settings.description }}"
         data-ingredients="{{ block.settings.ingredients }}"
+        data-color="{{ block.settings.bg_color }}"
       >
-        {% render 'image', image: block.settings.image %}
+        <div class="aspect-w-9 aspect-h-10">
+          {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
+        </div>
       </flavor-picker>
     {% endfor %}
   </div>
 </div>
 
-<script>
+<script
+  type="module"
+>
+  import { lab, formatHex, hsl } from 'https://cdn.skypack.dev/culori';
+
+  function getPastelBackground(hex) {
+    if (!hex) return '#ffffff';
+    try {
+      const labColor = lab(hex);
+      labColor.l = 87.77;
+      const hslColor = hsl(labColor);
+      hslColor.s = 0.63;
+      const lab2 = lab(hslColor);
+      lab2.l = 87.77;
+
+      return formatHex(lab2);
+    } catch (e) {
+      return hex || '#ffffff';
+    }
+  }
+
+  function applyFlavorToDetail(flavorEl) {
+    if (!flavorEl) return;
+    // update checked attribute
+    document.querySelectorAll('flavor-picker').forEach((fp) => fp.setAttribute('aria-checked', 'false'));
+    flavorEl.setAttribute('aria-checked', 'true');
+
+    const flavorContainer = document.getElementById('flavor');
+    if (!flavorContainer) return;
+
+    // update image + text
+    const img = flavorEl.querySelector('img');
+    const imageEl = flavorContainer.querySelector('img');
+    const titleEl = flavorContainer.querySelector('[data-flavor-title]');
+    const descriptionEl = flavorContainer.querySelector('[data-flavor-description]');
+    const ingredientsEl = flavorContainer.querySelector('[data-flavor-ingredients]');
+
+    if (img && imageEl) {
+      imageEl.src = img.src;
+      imageEl.srcset = img.srcset || '';
+      imageEl.alt = 'Stone & Skilleet ' + (flavorEl.dataset.title || '') + ' packaging';
+      imageEl.classList.add('dotted', 'rounded-[6px]');
+    }
+
+    if (titleEl) titleEl.textContent = flavorEl.dataset.title || '';
+    if (descriptionEl) descriptionEl.textContent = flavorEl.dataset.description || '';
+    if (ingredientsEl) ingredientsEl.textContent = flavorEl.dataset.ingredients || '';
+
+    const pastel = getPastelBackground(flavorEl.dataset.color);
+    flavorContainer.style.setProperty('--flavor-bg', pastel);
+    flavorContainer.style.background = `var(--flavor-bg)`;
+  }
+
+  // Custom element behavior
   class FlavorPicker extends HTMLElement {
     connectedCallback() {
-      this.addEventListener('click', () => {
-        if (this.getAttribute('aria-pressed') === 'true') return;
-
-        // Deselect all flavor-pickers
-        document.querySelectorAll('flavor-picker').forEach((fp) => {
-          fp.setAttribute('aria-pressed', 'false');
-        });
-
-        // Select this flavor
-        this.setAttribute('aria-pressed', 'true');
-
-        // Update flavor info
-        const flavorContainer = document.getElementById('flavor');
-        const imageEl = flavorContainer.querySelector('img');
-        const titleEl = flavorContainer.querySelector('[data-flavor-title]');
-        const descriptionEl = flavorContainer.querySelector('[data-flavor-description]');
-        const ingredientsEl = flavorContainer.querySelector('[data-flavor-ingredients]');
-
-        // Update the values from this element's dataset
-        const img = this.querySelector('img');
-        if (img) {
-          imageEl.src = img.src;
-          imageEl.srcset = img.srcset;
-          imageEl.alt = 'Stone & Skilleet ' + this.dataset.title + ' packaging';
-          imageEl.classList.add('dotted', 'rounded-[6px]');
-        }
-
-        titleEl.textContent = this.dataset.title;
-        descriptionEl.textContent = this.dataset.description;
-        ingredientsEl.textContent = this.dataset.ingredients;
-      });
+      if (!this._flavorClickHandler) {
+        this._flavorClickHandler = () => {
+          if (this.getAttribute('aria-checked') === 'true') return;
+          applyFlavorToDetail(this);
+        };
+        this.addEventListener('click', this._flavorClickHandler);
+      }
+    }
+    disconnectedCallback() {
+      if (this._flavorClickHandler) {
+        this.removeEventListener('click', this._flavorClickHandler);
+      }
     }
   }
 
   if (!customElements.get('flavor-picker')) {
     customElements.define('flavor-picker', FlavorPicker);
   }
+
+  // On initial load: pick flavor with aria-checked="true" or the first
+  document.addEventListener('DOMContentLoaded', () => {
+    const initial =
+      document.querySelector('flavor-picker[aria-checked="true"]') || document.querySelector('flavor-picker');
+    if (initial) applyFlavorToDetail(initial);
+  });
 </script>
 
 {% schema %}
