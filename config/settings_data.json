@@ -115,84 +115,9 @@
       },
       "footer": {
         "type": "footer",
-        "blocks": {
-          "credit_wFUTmd": {
-            "type": "credit",
-            "settings": {
-              "role": "Founding Editor",
-              "text": "Whitney Mallett ",
-              "link": ""
-            }
-          },
-          "credit_rJx4qY": {
-            "type": "credit",
-            "settings": {
-              "role": "Art Director",
-              "text": "Immanuel Yang",
-              "link": ""
-            }
-          },
-          "credit_gjtacD": {
-            "type": "credit",
-            "settings": {
-              "role": "Associate Publisher",
-              "text": "Michael Bullock",
-              "link": ""
-            }
-          },
-          "credit_KbbmfK": {
-            "type": "credit",
-            "settings": {
-              "role": "Executive Editor",
-              "text": "Mekala Rajagopal ",
-              "link": ""
-            }
-          },
-          "credit_tQzYAm": {
-            "type": "credit",
-            "settings": {
-              "role": "Senior Editor",
-              "text": "Morgan Becker ",
-              "link": ""
-            }
-          },
-          "credit_FEWkjK": {
-            "type": "credit",
-            "settings": {
-              "role": "Associate Editor",
-              "text": "Fabiana Lacau",
-              "link": ""
-            }
-          },
-          "credit_Hyt9WU": {
-            "type": "credit",
-            "settings": {
-              "role": "Editorial Assistant",
-              "text": "Fern Paltrow",
-              "link": ""
-            }
-          },
-          "credit_XR8UXQ": {
-            "type": "credit",
-            "settings": {
-              "role": "Editorial Assistant",
-              "text": "Ariel Friedman",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "credit_wFUTmd",
-          "credit_rJx4qY",
-          "credit_gjtacD",
-          "credit_KbbmfK",
-          "credit_tQzYAm",
-          "credit_FEWkjK",
-          "credit_Hyt9WU",
-          "credit_XR8UXQ"
-        ],
         "settings": {
-          "about": "The Whitney Review of New Writing is an independent journal of literary criticism based in New York City. Each issue features interviews, essays, poetry, and more than seventy short-format reviews—a laboratory for sharp, pithy writing that experiments with new modes of criticism. \n\nAt once a place of discovery, guiding readers toward their next book, it also stands as a record of the zeitgeist, connecting a culture of reading to interdisciplinary perspectives in art, design, performance, music, nightlife, and fashion.\n\nThe criticism engages writing in radically different formats, from major houses and micro presses to advertising copy and spoken-word performance, offering both support and context for the literary ecosystem.\n\nPrevious contributors include Dennis Cooper, Mary Gaitskill, Claudia Rankine, Alissa Bennett, Honey Dijon, K8 Hardy, Rhea Dillon, Diamond Stingily, Hedi El Kholti, Natasha Stagg, Rayne Fisher-Quann, Samuel R. Delany, E. Jane, Maya Martinez, Grace Byron, Tao Lin, and many others.\n\n39 West 29 Street, #620, New York, NY 10001"
+          "socials": "",
+          "outbound_links": ""
         }
       },
       "hero": {
@@ -399,6 +324,17 @@
         "settings": {
           "quote_image": "shopify://shop_images/Frame_1.png",
           "caption": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall."
+        }
+      },
+      "card": {
+        "type": "card",
+        "settings": {}
+      },
+      "about": {
+        "type": "about",
+        "settings": {
+          "caption": "We feel there is something magical about a warm, doughy English Muffin. In 2013, we followed our dreams and created a recipe in our Boston apartment. By shaping dough on a granite stone countertop and griddling to perfection on a cast-iron skillet, it only felt right to name our company Stone & Skillet.\n\nWe feel there is something magical about a warm, doughy English Muffin.",
+          "social_url": "https://www.instagram.com/stone_and_skillet/?hl=en"
         }
       }
     },
