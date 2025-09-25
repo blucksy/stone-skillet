@@ -1,24 +1,42 @@
-<img src="{{'front.jpg' | asset_url}}" class="w-2/3 mx-auto rounded -rotate-3">
+<div class="h-[90vh] relative ">
+  <img
+    src="{{ section.settings.quote_image | img_url: 'master' }}"
+    alt="Quote Image"
+    class="h-full w-full object-cover"
+  >
+  {% if section.settings.caption %}
+    <div class="flex content-center absolute w-full h-full left-0 top-0">
+      <p class="my-auto w-2/3 z text-white mx-auto text-center flex text-heading  ">
+        {{ section.settings.caption }}
+      </p>
+    </div>
+  {% endif %}
+</div>
 
-{% comment %} about fields image  description and link {% endcomment %}
 {% schema %}
 {
-  "name": "card",
+  "name": "quote",
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "id": "quote_image",
+      "label": "Quote Image"
     },
     {
-      "type": "text",
-      "id": "description",
-      "label": "Description"
+      "type": "textarea",
+      "id": "caption",
+      "label": "Caption"
     },
     {
       "type": "url",
-      "id": "link",
-      "label": "Link"
+      "id": "social_url",
+      "label": "Url"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote",
+      "category": "Custom"
     }
   ]
 }
