@@ -1,0 +1,82 @@
+<div class="hidden md:block">
+  {% assign half = section.blocks.size | divided_by: 2 | plus: 1 %}
+
+  <div>
+    {% for block in section.blocks limit: half %}
+      <flavor-picker
+        aria-role="button"
+        class="aria-selected:opacity-100 opacity-50 transition-opacity"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %} "
+      >
+        {% render 'image', image: block.settings.image %}
+      </flavor-picker>
+    {% endfor %}
+  </div>
+
+  <div id="flavor">
+    {% render 'image', image: section.blocks[0].settings.image %}
+    <p>{{ section.blocks[0].settings.title }}</p>
+    <p>{{ section.blocks[0].settings.description }}</p>
+    <p>{{ section.blocks[0].settings.ingredients }}</p>
+  </div>
+
+  <div class="mt-[30px]">
+    {% for block in section.blocks offset: half %}
+      <flavor-picker
+        aria-role="button"
+        class="aria-selected:opacity-100 opacity-50 transition-opacity"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %} "
+      >
+        {% render 'image', image: block.settings.image %}
+      </flavor-picker>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Flavors",
+  "blocks": [
+    {
+      "type": "flavor",
+      "name": "Flavor",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Color (pick directly from image)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Delicious Flavor"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "A brief description of the flavor."
+        },
+        {
+          "type": "text",
+          "id": "ingredients",
+          "label": "Ingredients",
+          "default": "List of ingredients."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
