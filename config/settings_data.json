@@ -24,41 +24,53 @@
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/image_3.png",
-              "caption": "From breakfast to dessert! English muffins can do it all"
+              "caption": "From breakfast to dessert! English muffins can do it all",
+              "username": "@blucksy",
+              "username_link": "https://instagram.com/blucksy"
             }
           },
           "image_GKVBFR": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/blicky.png",
-              "caption": "From breakfast to dessert! English muffins can do it allFrom breakfast to dessert! English muffins can do it all"
+              "caption": "From breakfast to dessert! English muffins can do it allFrom breakfast to dessert! English muffins can do it all",
+              "username": "",
+              "username_link": ""
             }
           },
           "image_xApTn8": {
             "type": "image",
             "settings": {
-              "caption": "From breakfast to dessert! English muffins can do it all"
+              "caption": "From breakfast to dessert! English muffins can do it all",
+              "username": "",
+              "username_link": ""
             }
           },
           "image_ezihEB": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/image_3.png",
-              "caption": "Caption 1"
+              "caption": "Caption 1",
+              "username": "",
+              "username_link": ""
             }
           },
           "image_hnRQDR": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/blicky.png",
-              "caption": ""
+              "caption": "",
+              "username": "",
+              "username_link": ""
             }
           },
           "image_hcNhLV": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/blicky.png",
-              "caption": ""
+              "caption": "",
+              "username": "",
+              "username_link": ""
             }
           }
         },
