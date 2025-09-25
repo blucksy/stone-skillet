@@ -180,7 +180,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Cinnamon_Raisin.jpg",
-              "bg_color": "#aa3cc7",
+              "bg_color": "#924398",
               "title": "Cinnamon Raisin",
               "description": "A brief description of the flavor.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Raisins, Wheat  Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Cinnamon,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
@@ -190,16 +190,104 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Everything.jpg",
-              "bg_color": "",
+              "bg_color": "#473f3c",
               "title": "Everything",
               "description": "A brief description of the flavor.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Natural Enzymes (Wheat  Flour, Enzymes), Garlic, Onion, Poppy Seeds, Canola Oil (Expeller Pressed)."
+            }
+          },
+          "flavor_zhFgxR": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Original.jpg",
+              "bg_color": "#45a5cb",
+              "title": "Original",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Apple Cider Vinegar, Natural  Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
+            }
+          },
+          "flavor_6t9CTk": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Roasted_Herb___Garlic.jpg",
+              "bg_color": "#014e2b",
+              "title": "Roasted Herb & Garlic",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Garlic, Black Pepper,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed), Rosemary,  Thyme."
+            }
+          },
+          "flavor_nt4838": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Orange_Cranberry.jpg",
+              "bg_color": "#ba2629",
+              "title": "Orange Cranberry",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Dried Cranberries  (Cranberries, Sugar), Sugar, Butter (Pasteurized Cream, Natural Flavoring), Wheat  Flour (Cultured), Yeast, Salt, Orange Extract, Natural Enzymes (Wheat Flour,  Enzymes), Canola Oil (Expeller Pressed)."
+            }
+          },
+          "flavor_wbAMw7": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Stuffin_Muffin.jpg",
+              "bg_color": "#eba300",
+              "title": "Stuffin' Muffin",
+              "description": "A brief description of the flavor.",
+              "ingredients": "List of ingredients."
+            }
+          },
+          "flavor_LJBw78": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Lemon_Blueberry.jpg",
+              "bg_color": "#045bc1",
+              "title": "Lemon Blueberry",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Sugar, Dried Blueberries,  Cornmeal, Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring),  Yeast, Lemon Extract, Salt, Natural Enzymes (Wheat Flour, Enzymes), Canola Oil  (Expeller Pressed)."
+            }
+          },
+          "flavor_3pQEQ3": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Wheat.jpg",
+              "bg_color": "#e65302",
+              "title": "Wheat",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Wheat Flour, Water, Cornmeal, Honey,  Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
+            }
+          },
+          "flavor_3qxVcC": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/French_Toast.jpg",
+              "bg_color": "#b78bc3",
+              "title": "French Toast",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Brown Sugar,  Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Salt, Yeast,  Canola Oil (Expeller Pressed), Cinnamon, Natural Enzymes (Wheat Flour, Enzymes),  Nutmeg, Vanilla Extract, Cloves, Ginger."
+            }
+          },
+          "flavor_dT7XPk": {
+            "type": "flavor",
+            "settings": {
+              "image": "shopify://shop_images/Super_Grains.jpg",
+              "bg_color": "#7a8382",
+              "title": "Super Grains",
+              "description": "A brief description of the flavor.",
+              "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Upcycled Super Grain Mix (Barley,  Wheat), Whole Wheat Flour, Cornmeal, Honey, Millet, Flax Seeds, Butter (Pasteurized  Cream, Natural Flavoring), Wheat Flour (Cultured), Salt, Sunflower Seeds, Yeast,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
             }
           }
         },
         "block_order": [
           "flavor_rfhYeq",
-          "flavor_4tXXgE"
+          "flavor_4tXXgE",
+          "flavor_zhFgxR",
+          "flavor_6t9CTk",
+          "flavor_nt4838",
+          "flavor_wbAMw7",
+          "flavor_LJBw78",
+          "flavor_3pQEQ3",
+          "flavor_3qxVcC",
+          "flavor_dT7XPk"
         ],
         "settings": {}
       }
