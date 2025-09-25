@@ -23,26 +23,52 @@
           "image_WjMHcy": {
             "type": "image",
             "settings": {
+              "image": "shopify://shop_images/image_3.png",
+              "caption": "From breakfast to dessert! English muffins can do it all"
+            }
+          },
+          "image_GKVBFR": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/blicky.png",
+              "caption": "From breakfast to dessert! English muffins can do it allFrom breakfast to dessert! English muffins can do it all"
+            }
+          },
+          "image_xApTn8": {
+            "type": "image",
+            "settings": {
+              "caption": "From breakfast to dessert! English muffins can do it all"
+            }
+          },
+          "image_ezihEB": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/image_3.png",
               "caption": "Caption 1"
             }
           },
-          "image_Ua7zHY": {
+          "image_hnRQDR": {
             "type": "image",
             "settings": {
-              "caption": "Caption whatever"
+              "image": "shopify://shop_images/blicky.png",
+              "caption": ""
             }
           },
-          "image_Lg7NqD": {
+          "image_hcNhLV": {
             "type": "image",
             "settings": {
-              "caption": "Caption XYZ"
+              "image": "shopify://shop_images/blicky.png",
+              "caption": ""
             }
           }
         },
         "block_order": [
           "image_WjMHcy",
-          "image_Ua7zHY",
-          "image_Lg7NqD"
+          "image_GKVBFR",
+          "image_xApTn8",
+          "image_ezihEB",
+          "image_hnRQDR",
+          "image_hcNhLV"
         ],
         "settings": {}
       },
