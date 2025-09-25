@@ -1,0 +1,43 @@
+{%- assign default_sizes = '375,750,1280,2048,3240' | split: ',' -%}
+{%- assign srcset_sizes = srcset | split: ',' | default: default_sizes -%}
+
+{% assign split_test = image | split: '_ref' %}
+
+{% if split_test.size > 1 %}
+  {% comment %}
+    SANITY IMAGE
+  {% endcomment %}
+
+  {%- assign cover_image_start = image | split: '_ref":"' | last %}
+  {%- assign cover_image = cover_image_start | split: '"' | first %}
+  {%- assign image = cover_image | replace: 'image-', '' | replace_last: '-', '.' %}
+  <img
+    src="https://cdn.sanity.io/images/jxkonc1b/production/{{ image }}"
+    srcset="
+      {%- for size in srcset_sizes -%}
+        https://cdn.sanity.io/images/jxkonc1b/production/{{ image }}?auto=format&w={{ size }} {{ size }}w{% if forloop.last == false %}, {% endif %}
+      {%- endfor -%}
+    "
+    alt="{{ alt | escape }}"
+    loading="{% if loadFirst %}eager{% else %}lazy{% endif %}"
+    class="{{ class }}"
+  >
+{%- else -%}
+  {% comment %}
+    NORMAL IMAGE
+  {% endcomment %}
+
+  <img
+    src="{{ image | image_url: "master" }}"
+    srcset="
+      {%- for size in srcset_sizes -%}
+        {{ image | image_url: width: size }} {{ size }}w{% if forloop.last == false %}, {% endif %}
+      {%- endfor -%}
+    "
+    alt="{{ alt | escape }}"
+    loading="{% if loadFirst %}eager{% else %}lazy{% endif %}"
+    class="{{ class }} "
+    style="opacity: 0; transition: opacity 0.3s ease-in-out;"
+    onload="this.style.opacity = 1;"
+  >
+{%- endif -%}

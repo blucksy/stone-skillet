@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Active Collection",
+    "settings": [
+      {
+        "type": "collection",
+        "label": "Active Collection",
+        "id": "active_collection"
+      }
+    ]
+  },
+  {
+    "name": "Product Information",
+    "settings": [
+      {
+        "type": "textarea",
+        "label": "Default Shipping Info",
+        "id": "default_shipping_info"
+      },
+      {
+        "type": "textarea",
+        "label": "Default Exchange Info",
+        "id": "default_exchange_info"
+      }
+    ]
+  },
+  {
+    "name": "Cart Freebie (single item)",
+    "settings": [
+      {
+        "type": "checkbox",
+        "label": "Enable Freebie Toggle",
+        "id": "enable_freebie_toggle",
+        "default": false
+      },
+      {
+        "type": "product",
+        "label": "Freebie Product",
+        "id": "freebie_product_id",
+      },
+      {
+        "type": "text",
+        "label": "Freebie Label",
+        "id": "freebie_label",
+        "default": "Add a Free Gift"
+      },
+      {
+        "type": "number",
+        "label": "Minimum Purchase Amount for Freebie",
+        "id": "freebie_min_purchase",
+        "default": 0
+      },
+      {
+        "type": "text",
+        "label": "Product Discount Code",
+        "id": "freebie_discount_code",
+        "default": "DISCOUNT-CODE"
+      }
+    ]
+  }
+]

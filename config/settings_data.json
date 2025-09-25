@@ -1,0 +1,175 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "active_collection": "mainline",
+    "default_shipping_info": "Please allow 7-14 days for tracking information and shipping. Thank you for your patience. Thank you for supporting a small business.",
+    "default_exchange_info": "All items are Final Sale due to the rarity nature of the product. If we make a mistake with the order, we will always take full responsibility and work to create a solution.\n\nAny questions will be handled at info@theblueiris.boutique",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "media": {
+        "type": "media",
+        "blocks": {
+          "image_WjMHcy": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/001-olivia-reading.png",
+              "caption": "Caption 1"
+            }
+          },
+          "image_Ua7zHY": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/004zzzwhitneyreview_swissinst_shotbylacruz-66.jpg",
+              "caption": "Caption whatever"
+            }
+          },
+          "image_Lg7NqD": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/001-z20241012_whitneyreview_cdg-15_1.jpg",
+              "caption": "Caption XYZ"
+            }
+          }
+        },
+        "block_order": [
+          "image_WjMHcy",
+          "image_Ua7zHY",
+          "image_Lg7NqD"
+        ],
+        "settings": {}
+      },
+      "press": {
+        "type": "press",
+        "blocks": {
+          "press_fCVBb3": {
+            "type": "press",
+            "settings": {
+              "link": "",
+              "publication": "test",
+              "text": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditii",
+              "year": "year"
+            }
+          },
+          "press_LGDcph": {
+            "type": "press",
+            "settings": {
+              "link": "",
+              "publication": "publication 2",
+              "text": "aesentium voluptatum deleniti atque corrupti quos dolores et quas molestias",
+              "year": "year"
+            }
+          },
+          "press_QjzC9z": {
+            "type": "press",
+            "settings": {
+              "link": "",
+              "publication": "new york times",
+              "text": "The Look Book Goes to a Literary Launch Party",
+              "year": "1920"
+            }
+          }
+        },
+        "block_order": [
+          "press_fCVBb3",
+          "press_LGDcph",
+          "press_QjzC9z"
+        ],
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "credit_wFUTmd": {
+            "type": "credit",
+            "settings": {
+              "text": "Whitney Mallett ",
+              "role": "Founding Editor",
+              "link": ""
+            }
+          },
+          "credit_rJx4qY": {
+            "type": "credit",
+            "settings": {
+              "text": "Immanuel Yang",
+              "role": "Art Director",
+              "link": ""
+            }
+          },
+          "credit_gjtacD": {
+            "type": "credit",
+            "settings": {
+              "text": "Michael Bullock",
+              "role": "Associate Publisher",
+              "link": ""
+            }
+          },
+          "credit_KbbmfK": {
+            "type": "credit",
+            "settings": {
+              "text": "Mekala Rajagopal ",
+              "role": "Executive Editor",
+              "link": ""
+            }
+          },
+          "credit_tQzYAm": {
+            "type": "credit",
+            "settings": {
+              "text": "Morgan Becker ",
+              "role": "Senior Editor",
+              "link": ""
+            }
+          },
+          "credit_FEWkjK": {
+            "type": "credit",
+            "settings": {
+              "text": "Fabiana Lacau",
+              "role": "Associate Editor",
+              "link": ""
+            }
+          },
+          "credit_Hyt9WU": {
+            "type": "credit",
+            "settings": {
+              "text": "Fern Paltrow",
+              "role": "Editorial Assistant",
+              "link": ""
+            }
+          },
+          "credit_XR8UXQ": {
+            "type": "credit",
+            "settings": {
+              "text": "Ariel Friedman",
+              "role": "Editorial Assistant",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "credit_wFUTmd",
+          "credit_rJx4qY",
+          "credit_gjtacD",
+          "credit_KbbmfK",
+          "credit_tQzYAm",
+          "credit_FEWkjK",
+          "credit_Hyt9WU",
+          "credit_XR8UXQ"
+        ],
+        "settings": {
+          "about": "The Whitney Review of New Writing is an independent journal of literary criticism based in New York City. Each issue features interviews, essays, poetry, and more than seventy short-format reviews—a laboratory for sharp, pithy writing that experiments with new modes of criticism. \n\nAt once a place of discovery, guiding readers toward their next book, it also stands as a record of the zeitgeist, connecting a culture of reading to interdisciplinary perspectives in art, design, performance, music, nightlife, and fashion.\n\nThe criticism engages writing in radically different formats, from major houses and micro presses to advertising copy and spoken-word performance, offering both support and context for the literary ecosystem.\n\nPrevious contributors include Dennis Cooper, Mary Gaitskill, Claudia Rankine, Alissa Bennett, Honey Dijon, K8 Hardy, Rhea Dillon, Diamond Stingily, Hedi El Kholti, Natasha Stagg, Rayne Fisher-Quann, Samuel R. Delany, E. Jane, Maya Martinez, Grace Byron, Tao Lin, and many others.\n\n39 West 29 Street, #620, New York, NY 10001"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}

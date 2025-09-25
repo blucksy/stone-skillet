@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>
+      {{ page_title }}
+      {%- unless page_title contains 'The Whitney Review' %}
+        | The Whitney Review
+      {%- endunless -%}
+    </title>
+    <meta
+      name="title"
+      content="{{ page_title }}{%- unless page_title contains "The Whitney Review" %} | The Whitney Review{% endunless -%}"
+    >
+    <meta
+      property="og:title"
+      content="{{ page_title }}{%- unless page_title contains "The Whitney Review" %} | The Whitney Review{% endunless -%}"
+    >
+    <meta
+      property="twitter:title"
+      content="{{ page_title }}{%- unless page_title contains "The Whitney Review" %} | The Whitney Review{% endunless -%}"
+    >
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+      <meta property="og:description" content="{{ page_description | escape }}">
+      <meta name="twitter:description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    <link rel="shortcut icon" href="{{ "favicon.ico" | asset_url }}">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <script src="{{ 'base.js' | asset_url}}" defer></script>
+    {{ content_for_header }}
+    {{ 'index.css' | asset_url | stylesheet_tag }}
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    {% section 'header' %}
+    <div class="mt-[24px] py-[30px]">
+      {{ content_for_layout }}
+    </div>
+  </body>
+</html>

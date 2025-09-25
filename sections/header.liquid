@@ -1,0 +1,33 @@
+<div class="fixed top-[12px] px-page main-grid w-screen z-20">
+  <div class="col-span-5">
+    <a href="/" class="credit !normal-case">THE WHITNEY REVIEW of New Writing</a>
+  </div>
+  <div class="col-span-4">
+    <a href="#issues" class="credit">Issues</a>
+  </div>
+  <div class="col-span-4">
+    <a href="#media" class="credit">Media</a>
+  </div>
+  <div class="col-span-4">
+    <a href="#press" class="credit">Press</a>
+  </div>
+  <div class="col-span-2">
+    <button
+      type="button"
+      class="credit cursor-pointer hover:opacity-80 transition-opacity"
+      aria-label="Subscribe to newsletter"
+      onclick="document.querySelector('subscribe-helper').subscribe()"
+    >
+      Subscribe
+    </button>
+  </div>
+</div>
+
+<script>
+  console.log({{ all_products.subscription | json }});
+</script>
+
+<subscribe-helper
+  data-variant="{{ all_products.subscription.variants.first.id }}"
+  data-selling-plan="{{ all_products.subscription.selling_plan_groups.first.selling_plans.first.id }}"
+></subscribe-helper>

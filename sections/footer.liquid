@@ -1,0 +1,128 @@
+<div class="px-page main-grid mt-[45px]">
+  <div class="col-span-6">
+    <p class="credit mb-[4px]">About the Whitney Review</p>
+    <p class="whitespace-pre-line">{{- section.settings.about -}}</p>
+    <div class="w-[140px] mt-[8px]">
+      {% render 'signature' %}
+    </div>
+  </div>
+
+  {% assign roles = '' | split: ',' %}
+  {% for block in section.blocks %}
+    {% unless roles contains block.settings.role %}
+      {% assign single_role_array = block.settings.role | split: '*' %}
+      {% assign roles = roles | concat: single_role_array %}
+    {% endunless %}
+  {% endfor %}
+
+  {% assign half = roles.size | divided_by: 2 | plus: 1 %}
+
+  <div class="col-start-9 col-span-4 flex flex-col gap-[14px]">
+    {% for role in roles limit: half %}
+      {% if role != '' %}
+        <div>
+          <p class="credit mb-[4px]">{{ role }}</p>
+          {% for block in section.blocks %}
+            {% if block.settings.role == role %}
+              <p class="uppercase">
+                {% if block.settings.link != blank %}
+                  <a
+                    href="{{ block.settings.link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{- block.settings.text -}}
+                  </a>
+                {% else %}
+                  {{- block.settings.text -}}
+                {% endif %}
+              </p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class=" col-span-4 flex flex-col gap-[14px]">
+    {% for role in roles offset: half %}
+      {% if role != '' %}
+        <div>
+          <p class="credit mb-[4px]">{{ role }}</p>
+          {% for block in section.blocks %}
+            {% if block.settings.role == role %}
+              <p class="uppercase">
+                {% if block.settings.link != blank %}
+                  <a
+                    href="{{ block.settings.link }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{- block.settings.text -}}
+                  </a>
+                {% else %}
+                  {{- block.settings.text -}}
+                {% endif %}
+              </p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    <div>
+      <p class="credit mb-[4px]">Web Design & Development</p>
+      <p class="uppercase ">
+        <a
+          href="https://taw.vision"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          taw vision
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="col-span-3 flex flex-col gap-[14px]">
+    {% for link in linklists.footer.links %}
+      <a href="{{ link.url }}" class="block credit">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "about",
+      "label": "About the Whitney Review"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "credit",
+      "name": "Credit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Name"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

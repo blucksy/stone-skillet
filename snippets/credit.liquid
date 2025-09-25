@@ -1,0 +1,17 @@
+<div>
+  <span class="credit">{{- role -}}</span>
+
+  <p class="uppercase">
+    {% if link != blank %}
+      <a
+        href="{{ link }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{- name -}}
+      </a>
+    {% else %}
+      {{- name -}}
+    {% endif %}
+  </p>
+</div>

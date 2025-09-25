@@ -1,0 +1,54 @@
+<div class=" mt-[45px]">
+  <div class="mb-[15px] px-page">
+    {% render 'heading', title: 'Press' %}
+  </div>
+  <swiper-gallery class="overflow-x-hidden *:!px-[12px]">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.link }}" target="_blank" class="w-[calc((100vw-12px*20)/19*5+4*12px)] block">
+        <p class="credit">{{ block.settings.publication }}, {{ block.settings.year }}</p>
+        <p class="secondary mt-[4px]">“{{ block.settings.text }}”</p>
+      </a>
+    {% endfor %}
+  </swiper-gallery>
+</div>
+
+{% schema %}
+{
+  "name": "Press",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "press",
+      "name": "Press",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "publication",
+          "label": "Publication"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
