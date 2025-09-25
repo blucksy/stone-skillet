@@ -1,0 +1,42 @@
+<div class=" mt-[45px]">
+  <div class="mb-[15px] px-page">
+    {% render 'heading', title: 'Media' %}
+  </div>
+  <swiper-gallery class="overflow-x-hidden *:!px-[12px]">
+    {% for block in section.blocks %}
+      {% render 'image', image: block.settings.image, class: 'h-[512px]' %}
+    {% endfor %}
+  </swiper-gallery>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [],
+  // array of images, instacart link and title
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Caption"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
