@@ -21,6 +21,7 @@
 
   <div
     id="flavor"
+    style="--flavor-bg: {{ section.blocks[0].settings.bg_color }}; background: var(--flavor-bg);"
     class="col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center transition-colors"
   >
     <div class="aspect-w-9 aspect-h-10">
@@ -54,27 +55,7 @@
   </div>
 </div>
 
-<script
-  type="module"
->
-  import { lab, formatHex, hsl } from 'https://cdn.skypack.dev/culori';
-
-  function getPastelBackground(hex) {
-    if (!hex) return '#ffffff';
-    try {
-      const labColor = lab(hex);
-      labColor.l = 87.77;
-      const hslColor = hsl(labColor);
-      hslColor.s = 0.63;
-      const lab2 = lab(hslColor);
-      lab2.l = 87.77;
-
-      return formatHex(lab2);
-    } catch (e) {
-      return hex || '#ffffff';
-    }
-  }
-
+<script>
   function applyFlavorToDetail(flavorEl) {
     if (!flavorEl) return;
     // update checked attribute
@@ -102,8 +83,7 @@
     if (descriptionEl) descriptionEl.textContent = flavorEl.dataset.description || '';
     if (ingredientsEl) ingredientsEl.textContent = flavorEl.dataset.ingredients || '';
 
-    const pastel = getPastelBackground(flavorEl.dataset.color);
-    flavorContainer.style.setProperty('--flavor-bg', pastel);
+    flavorContainer.style.setProperty('--flavor-bg', flavorEl.dataset.color);
     flavorContainer.style.background = `var(--flavor-bg)`;
   }
 
@@ -128,13 +108,6 @@
   if (!customElements.get('flavor-picker')) {
     customElements.define('flavor-picker', FlavorPicker);
   }
-
-  // On initial load: pick flavor with aria-checked="true" or the first
-  document.addEventListener('DOMContentLoaded', () => {
-    const initial =
-      document.querySelector('flavor-picker[aria-checked="true"]') || document.querySelector('flavor-picker');
-    if (initial) applyFlavorToDetail(initial);
-  });
 </script>
 
 {% schema %}
