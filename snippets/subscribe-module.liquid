@@ -1,0 +1,58 @@
+{% comment %}
+  Subscribe Module Snippet
+
+  Usage: {% include 'subscribe-module',
+    heading: 'Subscribe to our newsletter',
+    subtext: 'Get updates on new releases...',
+    name_placeholder: 'Enter Name',
+    email_placeholder: 'Enter Email',
+    button_text: 'Sign Up',
+    button_color: 'red',
+    success_message: 'Thanks for subscribing!',
+    form_id: 'unique-form-id'
+  %}
+{% endcomment %}
+
+{% assign show_name_field = show_name_field | default: true %}
+{% assign name_placeholder = name_placeholder | default: 'Enter Name' %}
+{% assign email_placeholder = email_placeholder | default: 'Enter Email' %}
+{% assign button_text = button_text | default: 'Sign Up' %}
+
+{% assign button_color = button_color | default: 'red' %}
+{% assign success_message = success_message | default: 'Thanks for subscribing!' %}
+{% assign form_id = form_id | default: 'newsletter-form' %}
+
+<div class="subscribe-module cta   flex flex-col">
+  <div class="col-span-2">
+    <div class="flex flex-col items-start gap-4">
+      {% form 'customer', class: 'flex flex-row gap-4 mb-0 w-full' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="flex flex-row gap-4 w-full">
+          <input
+            type="email"
+            name="contact[email]"
+            id="NewsletterForm--{{ form_id }}"
+            class="w-full border-b border-black !p-0 focus:outline-none !bg-[transparent]"
+            placeholder="{{ email_placeholder }}"
+            required
+          >
+          <button
+            type="submit"
+            class="button bg-white"
+            name="commit"
+          >
+            {{ button_text }}
+          </button>
+        </div>
+
+        {%- if form.posted_successfully? -%}
+          <p class="text-green-600 text-sm mt-2">{{ success_message }}</p>
+        {%- endif -%}
+        {%- if form.errors -%}
+          <p class="text-sm mt-2 text-red-500">{{ form.errors.messages.email }}</p>
+        {%- endif -%}
+      {% endform %}
+      <p class="text-xs">By subscribing to our newsletter you are agreeing to our Privacy Policy.</p>
+    </div>
+  </div>
+</div>

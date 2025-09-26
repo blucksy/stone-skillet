@@ -39,15 +39,17 @@ body {
     line-height: 103%;
     letter-spacing: -0.03em;
   }
+  .text-link {
+    font-family: "Baton Nouveau", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.03em;
+  }
 }
 
 .button {
-  font-family: "Baton Nouveau", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: -0.03em;
-  @apply border rounded px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
+  @apply text-link border rounded px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
 }
 
 .px-page {
