@@ -58,6 +58,16 @@ class SlideShow extends HTMLElement {
           forceToAxis: true,
         },
         ...(navigation && { navigation }),
+        breakpoints: {
+          0: {
+            centeredSlides: true,
+            loop: true,
+          },
+          768: {
+            centeredSlides: false,
+            loop: false,
+          },
+        },
       });
     }
   }

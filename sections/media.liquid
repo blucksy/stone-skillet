@@ -1,7 +1,7 @@
 <div>
-  <div class="flex justify-between px-page  pb-[36px]">
-    <h3 class="text-secondary ">{{ section.settings.title }}</h3>
-    <div>
+  <div class="md:flex justify-between px-page  pb-[36px]">
+    <h3 class="text-heading md:text-secondary text-center md:text-left">{{ section.settings.title }}</h3>
+    <div class="hidden md:block">
       <button id="ugc-prev" class="aria-disabled:!opacity-50 transition-opacity mr-[12px]">
         {% render 'arrow', left: true %}
       </button>
@@ -13,7 +13,7 @@
   <swiper-gallery data-button-id="ugc" data-gap="18px" class="overflow-x-hidden *:!px-[36px] ">
     {% for block in section.blocks %}
       {% if block.settings.image %}
-        <div class="swiper-slide !w-[calc((100vw-36px*13)/12*4+36px*3)] !mt-0">
+        <div class="swiper-slide !w-[calc((100vw-9px*9-18px*2)/10*8+9px*7)] md:!w-[calc((100vw-36px*13)/12*4+36px*3)] !mt-0">
           <div class="aspect-w-1 aspect-h-1 w-full">
             {% render 'image', image: block.settings.image, class: 'dotted rounded w-full h-full object-cover' %}
           </div>
