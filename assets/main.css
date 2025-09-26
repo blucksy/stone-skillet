@@ -86,3 +86,7 @@ body {
   border: 1px dashed #000000;
   @apply uppercase h-[84] w-[84px] rounded-full z-10 flex items-center justify-center text-center transition-colors;
 }
+
+html {
+  scroll-behavior: smooth;
+}
