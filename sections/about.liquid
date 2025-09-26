@@ -1,13 +1,9 @@
 <div class="h-[90vh] relative ">
-  <img
-    src="{{ section.settings.quote_image | img_url: 'master' }}"
-    alt="Quote Image"
-    class="h-full w-full object-cover"
-  >
+  {% render 'image', image: section.settings.quote_image, class: 'h-full w-full object-cover' %}
   {% if section.settings.caption %}
     <div class="flex content-center absolute w-full h-full bottom-9 right-9 justify-end items-end">
-      <div class=" h-min flex  flex-col max-w-[586px] px-4 py-6  text-left gap-6 rounded dotted bg-white text-black ">
-        <h4 class="text-heading">About Us</h4>
+      <div class=" h-min flex flex-col max-w-[586px] px-4 py-6  text-left gap-6 rounded dotted bg-white">
+        <h4 class="text-secondary">About Us</h4>
         <p>{{ section.settings.caption }}</p>
         <a href="#issues" class="button !hidden sm:!flex w-min">Follow Us to Learn More</a>
       </div>

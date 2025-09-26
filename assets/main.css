@@ -21,18 +21,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-.rotate {
-  animation: rotation 20s infinite linear;
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .text-heading {
   font-family: "Baton Nouveau", sans-serif;
   font-style: normal;
@@ -74,4 +62,16 @@ body {
 
 .dotted {
   border: 1px dashed #000000;
+}
+
+.rotate {
+  animation: rotation 20s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

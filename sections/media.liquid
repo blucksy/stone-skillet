@@ -1,28 +1,29 @@
 <div>
-  <h3 class="text-heading px-9 pb-9">the dynamic muffin</h3>
-  <swiper-gallery data-gap="32px" class="overflow-x-hidden *:!px-[12px]">
+  <h3 class="text-heading px-page pb-9">{{ section.settings.title }}</h3>
+  <swiper-gallery data-gap="18px" class="overflow-x-hidden *:!px-[36px]">
     {% for block in section.blocks %}
-      <div class="w-[42vw] swiper-slide border-gray-200 rounded-lg overflow-hidden flex flex-col  h-[512px]">
-        {% if block.settings.image %}
-          <img
-            src="{{ block.settings.image | img_url: 'medium' }}"
-            alt="{{ block.settings.caption | escape }}"
-            class="dotted rounded"
-          >
-          <div>
+      {% if block.settings.image %}
+        <div class="swiper-slide !w-[calc((100vw-36px*13)/12*4+36px*3)] !mt-0">
+          <div class="aspect-w-1 aspect-h-1 w-full">
+            {% render 'image', image: block.settings.image, class: 'dotted rounded w-full h-full object-cover' %}
+          </div>
+          <div class="mt-[18px] flex flex-col gap-[12px] text-center w-full">
             {% if block.settings.caption %}
-              <p class="text-sm text-gray-600 mt-2">{{ block.settings.caption }}</p>
+              <p class="">{{ block.settings.caption }}</p>
             {% endif %}
             {% if block.settings.username and block.settings.username_link %}
               <a
                 href="{{ block.settings.username_link }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-[12px] italic w-fit mx-auto hover:opacity-70 transition-opacity"
               >
                 {{ block.settings.username }}
               </a>
             {% endif %}
           </div>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </swiper-gallery>
 </div>
@@ -30,7 +31,14 @@
 {% schema %}
 {
   "name": "UGC",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Dynamic Muffin"
+    }
+  ],
   "blocks": [
     {
       "type": "image",
