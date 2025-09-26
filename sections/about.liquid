@@ -5,10 +5,12 @@
     class="h-full w-full object-cover"
   >
   {% if section.settings.caption %}
-    <div class="flex content-center absolute w-full h-full left-0 top-0">
-      <p class="my-auto w-2/3 z text-white mx-auto text-center flex text-heading  ">
-        {{ section.settings.caption }}
-      </p>
+    <div class="flex content-center absolute w-full h-full bottom-9 right-9 justify-end items-end">
+      <div class=" h-min flex  flex-col max-w-[586px] px-4 py-6  text-left gap-6 rounded dotted bg-white text-black ">
+        <h4 class="text-heading">About Us</h4>
+        <p>{{ section.settings.caption }}</p>
+        <a href="#issues" class="button !hidden sm:!flex w-min">Follow Us to Learn More</a>
+      </div>
     </div>
   {% endif %}
 </div>
