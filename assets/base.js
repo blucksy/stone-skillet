@@ -31,6 +31,20 @@ class SlideShow extends HTMLElement {
   initSwiper() {
     const swiperEl = this.querySelector(".swiper");
 
+    // Navigation buttons if data-button-id is provided
+    let navigation = undefined;
+    const buttonId = this.getAttribute("data-button-id");
+    if (buttonId) {
+      const prevEl = document.getElementById(`${buttonId}-prev`);
+      const nextEl = document.getElementById(`${buttonId}-next`);
+      if (prevEl && nextEl) {
+        navigation = {
+          prevEl,
+          nextEl,
+        };
+      }
+    }
+
     if (swiperEl) {
       this.swiper = new Swiper(swiperEl, {
         slidesPerView: "auto",
@@ -43,6 +57,7 @@ class SlideShow extends HTMLElement {
         mousewheel: {
           forceToAxis: true,
         },
+        ...(navigation && { navigation }),
       });
     }
   }
