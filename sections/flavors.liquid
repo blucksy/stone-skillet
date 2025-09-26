@@ -32,8 +32,24 @@
       %}
     </div>
     <p class="text-secondary" data-flavor-title>{{ section.blocks[0].settings.title }}</p>
-    <p data-flavor-description>{{ section.blocks[0].settings.description }}</p>
-    <p data-flavor-ingredients>{{ section.blocks[0].settings.ingredients }}</p>
+    <div class="relative ">
+      <p data-flavor-description>{{ section.blocks[0].settings.description }}</p>
+      <p
+        class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
+        data-flavor-ingredients
+        aria-hidden="true"
+        style="background: var(--flavor-bg);"
+      >
+        {{ section.blocks[0].settings.ingredients }}
+      </p>
+    </div>
+    <button
+      class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+      aria-controls="flavor-ingredients"
+      aria-expanded="false"
+    >
+      Ingredients
+    </button>
   </div>
 
   <div class="col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
@@ -58,6 +74,7 @@
 <script>
   function applyFlavorToDetail(flavorEl) {
     if (!flavorEl) return;
+
     // update checked attribute
     document.querySelectorAll('flavor-picker').forEach((fp) => fp.setAttribute('aria-checked', 'false'));
     flavorEl.setAttribute('aria-checked', 'true');
@@ -71,6 +88,7 @@
     const titleEl = flavorContainer.querySelector('[data-flavor-title]');
     const descriptionEl = flavorContainer.querySelector('[data-flavor-description]');
     const ingredientsEl = flavorContainer.querySelector('[data-flavor-ingredients]');
+    const toggleBtn = flavorContainer.querySelector('button');
 
     if (img && imageEl) {
       imageEl.src = img.src;
@@ -80,11 +98,36 @@
 
     if (titleEl) titleEl.textContent = flavorEl.dataset.title || '';
     if (descriptionEl) descriptionEl.textContent = flavorEl.dataset.description || '';
-    if (ingredientsEl) ingredientsEl.textContent = flavorEl.dataset.ingredients || '';
+    if (ingredientsEl) {
+      ingredientsEl.textContent = flavorEl.dataset.ingredients || '';
+      ingredientsEl.setAttribute('aria-hidden', 'true'); // always hide when switching flavors
+    }
+    if (toggleBtn) {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      toggleBtn.classList.remove('underline');
+    }
 
     flavorContainer.style.setProperty('--flavor-bg', flavorEl.dataset.color);
     flavorContainer.style.background = `var(--flavor-bg)`;
   }
+
+  // Toggle ingredients button behavior
+  document.addEventListener('DOMContentLoaded', () => {
+    const flavorContainer = document.getElementById('flavor');
+    const ingredientsEl = flavorContainer.querySelector('[data-flavor-ingredients]');
+    const toggleBtn = flavorContainer.querySelector('button');
+
+    if (toggleBtn && ingredientsEl) {
+      // initialize hidden
+      ingredientsEl.setAttribute('aria-hidden', 'true');
+
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = ingredientsEl.getAttribute('aria-hidden') === 'true';
+        ingredientsEl.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+        toggleBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      });
+    }
+  });
 
   // Custom element behavior
   class FlavorPicker extends HTMLElement {
