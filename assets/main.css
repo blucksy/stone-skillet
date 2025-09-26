@@ -75,3 +75,14 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.ball {
+  font-family: "Baton Nouveau", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: -0.03em;
+  border: 1px dashed #000000;
+  @apply uppercase h-[84] w-[84px] rounded-full z-10 flex items-center justify-center text-center transition-colors;
+}

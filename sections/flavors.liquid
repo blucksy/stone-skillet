@@ -1,73 +1,85 @@
-<div class="hidden md:grid px-page main-grid">
-  {% assign half = section.blocks.size | divided_by: 2 %}
+<div class="px-page">
+  <p class="text-heading text-center pb-[36px]">Explore Our Flavors</p>
+  <div class="hidden md:grid  main-grid">
+    {% assign half = section.blocks.size | divided_by: 2 %}
 
-  <div class="col-start-2 col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
-    {% for block in section.blocks limit: half %}
-      <flavor-picker
-        role="radio"
-        class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit"
-        aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
-        data-title="{{ block.settings.title }}"
-        data-description="{{ block.settings.description }}"
-        data-ingredients="{{ block.settings.ingredients }}"
-        data-color="{{ block.settings.bg_color }}"
-      >
-        <div class="aspect-w-9 aspect-h-10">
-          {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
-        </div>
-      </flavor-picker>
-    {% endfor %}
-  </div>
+    <div class="lg:col-start-2 col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
+      {% for block in section.blocks limit: half %}
+        <flavor-picker
+          role="radio"
+          class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit"
+          aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
+          data-title="{{ block.settings.title }}"
+          data-description="{{ block.settings.description }}"
+          data-ingredients="{{ block.settings.ingredients }}"
+          data-color="{{ block.settings.bg_color }}"
+        >
+          <div class="aspect-w-9 aspect-h-10">
+            {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
+          </div>
+        </flavor-picker>
+      {% endfor %}
+    </div>
 
-  <div
-    id="flavor"
-    style="--flavor-bg: {{ section.blocks[0].settings.bg_color }}; background: var(--flavor-bg);"
-    class="col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center transition-colors"
-  >
-    <div class="aspect-w-9 aspect-h-10">
-      {% render 'image',
-        image: section.blocks[0].settings.image,
-        alt: section.blocks[0].settings.title,
-        class: 'dotted rounded-[6px] h-full w-full object-cover'
-      %}
-    </div>
-    <p class="text-secondary" data-flavor-title>{{ section.blocks[0].settings.title }}</p>
-    <div class="relative ">
-      <p data-flavor-description>{{ section.blocks[0].settings.description }}</p>
-      <p
-        class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
-        data-flavor-ingredients
-        aria-hidden="true"
-        style="background: var(--flavor-bg);"
-      >
-        {{ section.blocks[0].settings.ingredients }}
-      </p>
-    </div>
-    <button
-      class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
-      aria-controls="flavor-ingredients"
-      aria-expanded="false"
+    <div
+      id="flavor"
+      style="--flavor-bg: {{ section.blocks[0].settings.bg_color }}; background: var(--flavor-bg);"
+      class="relative col-span-6 lg:col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center transition-colors"
     >
-      Ingredients
-    </button>
-  </div>
+      <div class="ball absolute top-[5%] left-[8%] rotate-[-14deg]" style="background: var(--flavor-bg)">Non-GMO</div>
+      <div class="ball absolute left-[9%] top-[40%] rotate-[-9deg]" style="background: var(--flavor-bg)">
+        6g Protein
+      </div>
+      <div class="ball absolute right-[11%] top-[20%] rotate-[10deg]" style="background: var(--flavor-bg)">
+        Source<br>
+        of Fiber
+      </div>
 
-  <div class="col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
-    {% for block in section.blocks offset: half %}
-      <flavor-picker
-        role="button"
-        class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit "
-        aria-checked="false"
-        data-title="{{ block.settings.title }}"
-        data-description="{{ block.settings.description }}"
-        data-ingredients="{{ block.settings.ingredients }}"
-        data-color="{{ block.settings.bg_color }}"
+      <div class=" aspect-w-9 aspect-h-10">
+        {% render 'image',
+          image: section.blocks[0].settings.image,
+          alt: section.blocks[0].settings.title,
+          class: 'dotted rounded-[6px] h-full w-full object-cover'
+        %}
+      </div>
+      <p class="text-secondary" data-flavor-title>{{ section.blocks[0].settings.title }}</p>
+      <div class="relative ">
+        <p data-flavor-description>{{ section.blocks[0].settings.description }}</p>
+        <p
+          class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
+          data-flavor-ingredients
+          aria-hidden="true"
+          style="background: var(--flavor-bg);"
+        >
+          {{ section.blocks[0].settings.ingredients }}
+        </p>
+      </div>
+      <button
+        class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+        aria-controls="flavor-ingredients"
+        aria-expanded="false"
       >
-        <div class="aspect-w-9 aspect-h-10">
-          {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
-        </div>
-      </flavor-picker>
-    {% endfor %}
+        Ingredients
+      </button>
+    </div>
+
+    <div class="col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
+      {% for block in section.blocks offset: half %}
+        <flavor-picker
+          role="button"
+          class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit "
+          aria-checked="false"
+          data-title="{{ block.settings.title }}"
+          data-description="{{ block.settings.description }}"
+          data-ingredients="{{ block.settings.ingredients }}"
+          data-color="{{ block.settings.bg_color }}"
+        >
+          <div class="aspect-w-9 aspect-h-10">
+            {% render 'image', image: block.settings.image, class: 'h-full w-full object-cover' %}
+          </div>
+        </flavor-picker>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
