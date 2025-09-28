@@ -6,8 +6,6 @@
     subtext: 'Get updates on new releases...',
     name_placeholder: 'Enter Name',
     email_placeholder: 'Enter Email',
-    button_text: 'Sign Up',
-    button_color: 'red',
     success_message: 'Thanks for subscribing!',
     form_id: 'unique-form-id'
   %}
@@ -16,9 +14,7 @@
 {% assign show_name_field = show_name_field | default: true %}
 {% assign name_placeholder = name_placeholder | default: 'Enter Name' %}
 {% assign email_placeholder = email_placeholder | default: 'Enter Email' %}
-{% assign button_text = button_text | default: 'Sign Up' %}
 
-{% assign button_color = button_color | default: 'red' %}
 {% assign success_message = success_message | default: 'Thanks for subscribing!' %}
 {% assign form_id = form_id | default: 'newsletter-form' %}
 
@@ -41,7 +37,7 @@
             class="button bg-white"
             name="commit"
           >
-            {{ button_text }}
+            Subscribe
           </button>
         </div>
 
