@@ -963,6 +963,10 @@ video {
   row-gap: 12px;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
