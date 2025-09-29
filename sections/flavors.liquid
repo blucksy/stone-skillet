@@ -23,6 +23,7 @@
 
     <div
       id="flavor"
+      data-flavor-panel
       style="--flavor-bg: {{ section.blocks[0].settings.bg_color }}; background: var(--flavor-bg);"
       class="relative col-span-6 lg:col-span-4 rounded dotted px-[18px] py-[24px] flex flex-col gap-[24px] text-center transition-colors"
     >
@@ -49,6 +50,7 @@
         <p
           class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
           data-flavor-ingredients
+          id="flavor-ingredients"
           aria-hidden="true"
           style="background: var(--flavor-bg);"
         >
@@ -56,7 +58,7 @@
         </p>
       </div>
       <button
-        class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+        class="ingredients-toggle italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
         aria-controls="flavor-ingredients"
         aria-expanded="false"
       >
@@ -70,6 +72,7 @@
           role="button"
           class="aria-checked:!opacity-100 hover:opacity-75 aria-checked:cursor-default cursor-pointer opacity-50 transition-opacity w-1/2 h-fit "
           aria-checked="false"
+
           data-title="{{ block.settings.title }}"
           data-description="{{ block.settings.description }}"
           data-ingredients="{{ block.settings.ingredients }}"
@@ -87,6 +90,7 @@
     <swiper-gallery data-gap="0px" data-coverflow="true" class="overflow-x-hidden  ">
       {% for block in section.blocks %}
         <div
+          data-flavor-panel
           style="--flavor-bg: {{ block.settings.bg_color }}; background: var(--flavor-bg);"
           class="
             swiper-slide !w-[calc((100vw-9px*9-18px*2)/10*8+9px*7)] relative rounded dotted !flex flex-col  text-center
@@ -119,7 +123,7 @@
             <p>{{ block.settings.description }}</p>
             <p
               class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
-
+              data-flavor-ingredients
               aria-hidden="true"
               style="background: var(--flavor-bg);"
             >
@@ -127,7 +131,8 @@
             </p>
           </div>
           <button
-            class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+            class="italic ingredients-toggle opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+            id="ingredients-{{ forloop.index0 }}"
             aria-controls="flavor-ingredients"
             aria-expanded="false"
           >
@@ -181,22 +186,22 @@
 
   // Toggle ingredients button behavior
   document.addEventListener('DOMContentLoaded', () => {
-    const flavorContainer = document.getElementById('flavor');
-    const ingredientsEl = flavorContainer.querySelector('[data-flavor-ingredients]');
-    const toggleBtn = flavorContainer.querySelector('button');
+    document.querySelectorAll('[data-flavor-panel]').forEach((panel) => {
+      const ingredientsEl = panel.querySelector('[data-flavor-ingredients]');
+      const toggleBtn = panel.querySelector('.ingredients-toggle');
+      if (!ingredientsEl || !toggleBtn) return;
 
-    if (toggleBtn && ingredientsEl) {
-      // initialize hidden
       ingredientsEl.setAttribute('aria-hidden', 'true');
+      toggleBtn.setAttribute('aria-expanded', 'false');
 
       toggleBtn.addEventListener('click', () => {
         const isHidden = ingredientsEl.getAttribute('aria-hidden') === 'true';
         ingredientsEl.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
         toggleBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        toggleBtn.classList.toggle('underline', isHidden);
       });
-    }
+    });
   });
-
   // Custom element behavior
   class FlavorPicker extends HTMLElement {
     connectedCallback() {
