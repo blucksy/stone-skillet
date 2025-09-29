@@ -1,5 +1,8 @@
-<div class="fixed top-[18px] px-[18px] left-0 w-screen flex items-center justify-between z-50">
-  <h2 href="/" class="text-heading !text-[26px]">Stone & Skillet</h2>
+<div
+  id="header"
+  class="fixed top-[18px] transition-all duration-100 px-[18px] left-0 w-screen flex items-center justify-between z-50"
+>
+  <a href="{{ routes.root_url }}" class="text-heading !text-[26px]">Stone & Skillet</a>
 
   <div class="flex flex-row gap-[6px]">
     <a href="#our-muffins" class="bg-white button sm:bg-skillet">Our Muffins</a>
@@ -15,6 +18,45 @@
   </div>
 </div>
 
+{% comment %} if div with id="location" is in the screen then hide the nav on mobile. Once its gone bring it back. use intersection observer {% endcomment %}
+
 <script>
-  console.log({{ all_products.subscription | json }});
+  // on mount
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('header');
+    const locationSection = document.getElementById('location');
+    const footerSection = document.getElementById('footer');
+
+    let locationVisible = false;
+    let footerVisible = false;
+
+    function updateHeaderVisibility() {
+      if (locationVisible || footerVisible) {
+        header.style.opacity = '0';
+      } else {
+        header.style.opacity = '1';
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === locationSection) {
+            locationVisible = entry.isIntersecting;
+          }
+          if (entry.target === footerSection) {
+            footerVisible = entry.isIntersecting;
+          }
+        });
+        updateHeaderVisibility();
+      },
+      { threshold: 0.1 },
+    );
+
+    if (window.innerWidth < 640) {
+      if (locationSection) observer.observe(locationSection);
+      if (footerSection) observer.observe(footerSection);
+    }
+  });
 </script>

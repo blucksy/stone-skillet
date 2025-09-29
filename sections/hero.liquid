@@ -1,5 +1,12 @@
-<div class="relative overflow-hidden">
-  <div class="mt-[45px] flex flex-row h-[calc(100svh-45px-36px)] overflow-x-scroll w-screen relative">
+<img
+  height="72"
+  width="72"
+  alt="hand griddled in Boston, MA"
+  src="{{ 'hand-griddled.png' | asset_url }}"
+  class=" absolute w-[84px] rotate left-3 sm:left-[unset] top-[30vh] z-50 sm:hidden"
+>
+<div class="relative">
+  <div class="mt-[45px] flex flex-row h-[calc(100svh-45px-36px)] overflow-x-scroll w-screen sm:relative">
     <div class="flex flex-row " id="marquee">
       {% for block in section.blocks %}
         {% render 'image', image: block.settings.image, class: 'h-[75svh] md:h-[80svh] object-cover' %}
@@ -7,7 +14,7 @@
     </div>
   </div>
   <div class="main-grid bottom-0 px-page absolute left-0 w-screen">
-    <div class="col-span-10 sm:col-span-7 md:col-span-7 lg:col-span-6 xl:col-span-5 bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] relative">
+    <div class="col-span-10 sm:col-span-7 md:col-span-7 lg:col-span-6 xl:col-span-5 bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] sm:relative">
       <h3 class="text-heading text-balance text-center sm:text-left">{{ section.settings.hero_title }}</h3>
       <div class="flex flex-row gap-1 button mx-auto sm:mx-0 bg-white w-min">
         <a href="{{ section.settings.instacart_link }}" class="">Order on </a>
@@ -18,7 +25,7 @@
         width="72"
         alt="hand griddled in Boston, MA"
         src="{{ 'hand-griddled.png' | asset_url }}"
-        class="absolute w-[72px] rotate top-[-24px] right-[-12px]  md:right-[-24px]"
+        class=" hidden sm:block absolute w-[72px] rotate left-0 sm:left-[unset]  top-0 sm:top-[-24px]  sm:!right-[-24px]"
       >
     </div>
   </div>
