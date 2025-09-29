@@ -666,6 +666,10 @@ video {
   top: 5%;
 }
 
+.left-\[36px\] {
+  left: 36px;
+}
+
 .z-50 {
   z-index: 50;
 }
