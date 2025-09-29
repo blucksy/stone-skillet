@@ -16,10 +16,13 @@
   <div class="main-grid bottom-0 px-page absolute left-0 w-screen">
     <div class="col-span-10 sm:col-span-7 md:col-span-7 lg:col-span-6 xl:col-span-5 bg-skillet flex flex-col gap-[18px] rounded dotted px-[12px] py-[18px] sm:relative">
       <h3 class="text-heading text-balance text-center sm:text-left">{{ section.settings.hero_title }}</h3>
-      <div class="flex flex-row gap-1 button mx-auto sm:mx-0 bg-white w-min">
-        <a href="{{ section.settings.instacart_link }}" class="">Order on </a>
-        {% render 'instacart' %}
-      </div>
+
+      <a href="{{ settings.instacart_link }}" class="">
+        <div class="flex flex-row gap-1 button mx-auto sm:mx-0 bg-white w-min cursor-pointer">
+          Order on
+          {% render 'instacart' %}
+        </div>
+      </a>
       <img
         height="72"
         width="72"
@@ -58,11 +61,6 @@
       "id": "hero_title",
       "label": "Hero Title",
       "default": "Freshly Baked Muffins Delivered to Your Doorstep"
-    },
-    {
-      "type": "url",
-      "id": "instacart_link",
-      "label": "Instacart Link"
     }
   ],
   "blocks": [
