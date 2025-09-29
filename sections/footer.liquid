@@ -3,7 +3,7 @@
     {% comment %} MENUS {% endcomment %}
     {% comment %} menu with drop down {% endcomment %}
     {% for link in linklists['footer-1'].links %}
-      <div class="col-span-5 sm:col-span-3 flex flex-col gap-[12px]">
+      <div class="col-span-5 md:col-span-3 flex flex-col gap-[12px]">
         {% if link.links.size > 0 %}
           <ul class="flex flex-col gap-[8px]">
             {% for sublink in link.links %}
