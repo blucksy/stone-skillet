@@ -1,6 +1,6 @@
 <div class="px-page" id="our-muffins">
   <p class="text-heading text-center pb-[36px]">Explore Our Flavors</p>
-  <div class="hidden md:grid  main-grid">
+  <div class="!hidden md:!grid  main-grid">
     {% assign half = section.blocks.size | divided_by: 2 %}
 
     <div class="lg:col-start-2 col-span-3 flex flex-wrap gap-y-[12px] justify-center h-fit">
@@ -81,6 +81,61 @@
         </flavor-picker>
       {% endfor %}
     </div>
+  </div>
+
+  <div class="block md:hidden -mx-[19px]">
+    <swiper-gallery data-gap="0px" data-coverflow="true" class="overflow-x-hidden  ">
+      {% for block in section.blocks %}
+        <div
+          style="--flavor-bg: {{ block.settings.bg_color }}; background: var(--flavor-bg);"
+          class="
+            swiper-slide !w-[calc((100vw-9px*9-18px*2)/10*8+9px*7)] relative rounded dotted !flex flex-col  text-center
+            px-[9px] py-[18px] gap-[18px]
+            sm:px-[18px] sm:py-[24px] sm:gap-[24px]
+            [&:not(.swiper-slide-active)]:!scale-90 transition-transform duration-500 ease-in-out
+          "
+        >
+          <div class="ball absolute left-[3%] top-[5%] rotate-[-14deg]" style="background: var(--flavor-bg)">
+            Non-GMO
+          </div>
+          <div class="ball absolute left-[6%] top-[40%] rotate-[-9deg]" style="background: var(--flavor-bg)">
+            Rich in <br>
+            Fiber
+          </div>
+          <div class="ball absolute right-[8%] top-[20%] rotate-[10deg]" style="background: var(--flavor-bg)">
+            Source<br>
+            of Protein
+          </div>
+
+          <div class=" aspect-w-9 aspect-h-10">
+            {% render 'image',
+              image: block.settings.image,
+              alt: block.settings.title,
+              class: 'dotted rounded-[6px] h-full w-full object-cover'
+            %}
+          </div>
+          <p class="text-secondary">{{ block.settings.title }}</p>
+          <div class="relative ">
+            <p>{{ block.settings.description }}</p>
+            <p
+              class="absolute top-1/2 -translate-y-1/2 text-[12px] leading-[13px] aria-hidden:pointer-events-none aria-hidden:opacity-0  "
+
+              aria-hidden="true"
+              style="background: var(--flavor-bg);"
+            >
+              {{ block.settings.ingredients }}
+            </p>
+          </div>
+          <button
+            class="italic opacity-75 text-[12px] leading-[13px] aria-expanded:underline"
+            aria-controls="flavor-ingredients"
+            aria-expanded="false"
+          >
+            Ingredients
+          </button>
+        </div>
+      {% endfor %}
+    </swiper-gallery>
   </div>
 </div>
 
