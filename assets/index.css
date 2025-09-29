@@ -606,21 +606,8 @@ video {
   position: relative;
 }
 
-.inset-0 {
-  inset: 0px;
-}
-
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-
 .bottom-0 {
   bottom: 0px;
-}
-
-.bottom-\[36px\] {
-  bottom: 36px;
 }
 
 .left-0 {
@@ -643,8 +630,8 @@ video {
   left: 9%;
 }
 
-.right-\[-24px\] {
-  right: -24px;
+.right-\[-12px\] {
+  right: -12px;
 }
 
 .right-\[8\%\] {
@@ -677,6 +664,10 @@ video {
 
 .top-\[5\%\] {
   top: 5%;
+}
+
+.bottom-\[36px\] {
+  bottom: 36px;
 }
 
 .z-50 {
@@ -892,11 +883,6 @@ video {
   cursor: pointer;
 }
 
-.touch-pan-y {
-  --tw-pan-y: pan-y;
-  touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom);
-}
-
 .flex-row {
   flex-direction: row;
 }
@@ -933,8 +919,8 @@ video {
   justify-content: space-between;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-4 {
@@ -969,20 +955,12 @@ video {
   gap: 96px;
 }
 
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .\!gap-y-16 {
   row-gap: 4rem !important;
 }
 
 .gap-y-\[12px\] {
   row-gap: 12px;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .overflow-x-hidden {
@@ -1253,6 +1231,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+.overflow-x-scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .button {
   display: flex;
   height: 27px;
@@ -1412,6 +1397,10 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:absolute {
+    position: absolute;
+  }
+
   .sm\:col-span-3 {
     grid-column: span 3 / span 3;
   }
@@ -1483,6 +1472,10 @@ html {
 }
 
 @media (min-width: 768px) {
+  .md\:right-\[-24px\] {
+    right: -24px;
+  }
+
   .md\:col-span-10 {
     grid-column: span 10 / span 10;
   }

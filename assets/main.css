@@ -48,6 +48,11 @@ body {
   }
 }
 
+.overflow-x-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 .button {
   @apply text-link border rounded px-[12px] py-[8px] h-[27px] border-black whitespace-nowrap flex items-center justify-center;
 }
