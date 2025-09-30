@@ -74,7 +74,7 @@
           "image_hcNhLV"
         ],
         "settings": {
-          "title": "The Dynamic Muffin"
+          "title": "The Dynamic English Muffin"
         }
       },
       "press": {
@@ -211,7 +211,7 @@
               "image": "shopify://shop_images/Cinnamon_Raisin.jpg",
               "bg_color": "#d1a9e1",
               "title": "Cinnamon Raisin",
-              "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
+              "description": "Sweet, cozy, and just nostalgic enough to feel like a hug. Slather with cream cheese and a drizzle of honey.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Raisins, Wheat  Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Cinnamon,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
             }
           },
@@ -258,9 +258,9 @@
           "flavor_wbAMw7": {
             "type": "flavor",
             "settings": {
-              "image": "shopify://shop_images/Stuffin_Muffin.jpg",
+              "image": "shopify://shop_images/Screenshot_2025-09-30_at_1.44.40_PM.png",
               "bg_color": "#f3d280",
-              "title": "Stuffin' Muffin",
+              "title": "Pumpkin Spice",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "List of ingredients."
             }
@@ -324,7 +324,7 @@
         "type": "quote",
         "settings": {
           "quote_image": "shopify://shop_images/Frame_1.png",
-          "caption": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall."
+          "caption": "Artisan, hand-griddled, pillowy deliciousness."
         }
       },
       "card": {
