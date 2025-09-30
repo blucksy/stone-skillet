@@ -1,5 +1,6 @@
 <div class="h-[90svh] relative " id="about">
-  {% render 'image', image: section.settings.quote_image, class: 'h-full w-full object-cover' %}
+  {% render 'image', image: section.settings.quote_image, class: 'hidden sm:flex h-full w-full object-cover' %}
+  {% render 'image', image: section.settings.mobile_quote_image, class: 'flex sm:hidden h-full w-full object-cover' %}
   {% if section.settings.caption %}
     <div class="flex content-center absolute w-full px-page main-grid items-end bottom-0 pb-[36px]">
       <div class="col-span-full sm:col-span-8 sm:col-start-5 md:col-start-6 md:col-span-7 lg:col-start-7 lg:col-span-6 h-min flex flex-col px-4 py-6  text-left gap-6 rounded dotted bg-white">
@@ -19,6 +20,11 @@
       "type": "image_picker",
       "id": "quote_image",
       "label": "About Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_quote_image",
+      "label": "About Image (mobile)"
     },
     {
       "type": "textarea",
