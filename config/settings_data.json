@@ -73,7 +73,9 @@
           "image_hnRQDR",
           "image_hcNhLV"
         ],
-        "settings": {}
+        "settings": {
+          "title": "The Dynamic Muffin"
+        }
       },
       "press": {
         "type": "press",
@@ -106,7 +108,11 @@
             }
           }
         },
-        "block_order": ["press_fCVBb3", "press_LGDcph", "press_QjzC9z"],
+        "block_order": [
+          "press_fCVBb3",
+          "press_LGDcph",
+          "press_QjzC9z"
+        ],
         "settings": {}
       },
       "footer": {
@@ -193,8 +199,7 @@
           "image_YigR77"
         ],
         "settings": {
-          "hero_title": "The New England-style English Muffin",
-          "instacart_link": ""
+          "hero_title": "The New England-style English Muffin"
         }
       },
       "flavors": {
@@ -204,7 +209,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Cinnamon_Raisin.jpg",
-              "bg_color": "#D1A9E1",
+              "bg_color": "#d1a9e1",
               "title": "Cinnamon Raisin",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Raisins, Wheat  Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Cinnamon,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
@@ -214,7 +219,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Everything.jpg",
-              "bg_color": "#A29590",
+              "bg_color": "#a29590",
               "title": "Everything",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Natural Enzymes (Wheat  Flour, Enzymes), Garlic, Onion, Poppy Seeds, Canola Oil (Expeller Pressed)."
@@ -224,7 +229,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Original.jpg",
-              "bg_color": "#8CCCE5",
+              "bg_color": "#8ccce5",
               "title": "Original",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Apple Cider Vinegar, Natural  Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
@@ -234,7 +239,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Roasted_Herb___Garlic.jpg",
-              "bg_color": "#9FCBB3",
+              "bg_color": "#9fcbb3",
               "title": "Roasted Herb & Garlic",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Wheat Flour (Cultured),  Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt, Garlic, Black Pepper,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed), Rosemary,  Thyme."
@@ -244,7 +249,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Orange_Cranberry.jpg",
-              "bg_color": "#E5A29F",
+              "bg_color": "#e5a29f",
               "title": "Orange Cranberry",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Dried Cranberries  (Cranberries, Sugar), Sugar, Butter (Pasteurized Cream, Natural Flavoring), Wheat  Flour (Cultured), Yeast, Salt, Orange Extract, Natural Enzymes (Wheat Flour,  Enzymes), Canola Oil (Expeller Pressed)."
@@ -254,7 +259,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Stuffin_Muffin.jpg",
-              "bg_color": "#F3D280",
+              "bg_color": "#f3d280",
               "title": "Stuffin' Muffin",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "List of ingredients."
@@ -264,7 +269,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Lemon_Blueberry.jpg",
-              "bg_color": "#72A4DD",
+              "bg_color": "#72a4dd",
               "title": "Lemon Blueberry",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Sugar, Dried Blueberries,  Cornmeal, Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring),  Yeast, Lemon Extract, Salt, Natural Enzymes (Wheat Flour, Enzymes), Canola Oil  (Expeller Pressed)."
@@ -274,7 +279,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Wheat.jpg",
-              "bg_color": "#F6A36E",
+              "bg_color": "#f6a36e",
               "title": "Wheat",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Wheat Flour, Water, Cornmeal, Honey,  Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Yeast, Salt,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
@@ -284,7 +289,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/French_Toast.jpg",
-              "bg_color": "#E3CAEA",
+              "bg_color": "#e3caea",
               "title": "French Toast",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Cornmeal, Sugar, Brown Sugar,  Wheat Flour (Cultured), Butter (Pasteurized Cream, Natural Flavoring), Salt, Yeast,  Canola Oil (Expeller Pressed), Cinnamon, Natural Enzymes (Wheat Flour, Enzymes),  Nutmeg, Vanilla Extract, Cloves, Ginger."
@@ -294,7 +299,7 @@
             "type": "flavor",
             "settings": {
               "image": "shopify://shop_images/Super_Grains.jpg",
-              "bg_color": "#CBCBCB",
+              "bg_color": "#cbcbcb",
               "title": "Super Grains",
               "description": "An English muffin is a small, round and flat yeast-leavened (sometimes sourdough) bread which is commonly 4 in (10 cm) round and 1.5 in (4 cm) tall.",
               "ingredients": "Flour (Unbleached Hard Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron,  Thiamin Mononitrate, Riboflavin, Folic Acid), Water, Upcycled Super Grain Mix (Barley,  Wheat), Whole Wheat Flour, Cornmeal, Honey, Millet, Flax Seeds, Butter (Pasteurized  Cream, Natural Flavoring), Wheat Flour (Cultured), Salt, Sunflower Seeds, Yeast,  Natural Enzymes (Wheat Flour, Enzymes), Canola Oil (Expeller Pressed)."
@@ -329,10 +334,14 @@
       "about": {
         "type": "about",
         "settings": {
-          "quote_image": "shopify://shop_images/040925_STONE_AND_SKILLET_SHOT_12_0521.png",
+          "quote_image": "shopify://shop_images/WFM_Local_Supplier_Info_-_Stone_and_Skillet1.jpg",
           "caption": "We feel there is something magical about a warm, doughy English Muffin. In 2013, we followed our dreams and created a recipe in our Boston apartment. By shaping dough on a granite stone countertop and griddling to perfection on a cast-iron skillet, it only felt right to name our company Stone & Skillet.\n\nWe feel there is something magical about a warm, doughy English Muffin.",
           "social_url": "https://www.instagram.com/stone_and_skillet/?hl=en"
         }
+      },
+      "locator": {
+        "type": "locator",
+        "settings": {}
       }
     },
     "content_for_index": []
