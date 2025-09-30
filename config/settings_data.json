@@ -125,10 +125,22 @@
       "hero": {
         "type": "hero",
         "blocks": {
+          "image_ecnjQQ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Orange_Cranberry_d6cc1999-66fe-4050-af79-c1ee17eb9a6d.jpg"
+            }
+          },
           "image_CNXdjY": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/Cinnamon_Raisin_6a6646fe-2db1-41e0-8917-1542eaf27ed0.jpg"
+            }
+          },
+          "image_HVQTFj": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Original_08decff5-64d3-4b7f-9d84-2d16ab1bd171.jpg"
             }
           },
           "image_whCKA6": {
@@ -149,22 +161,16 @@
               "image": "shopify://shop_images/Lemon_Blueberry_a4424bb0-7640-4850-9f8b-98fcfe5c26be.jpg"
             }
           },
-          "image_ecnjQQ": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Orange_Cranberry_d6cc1999-66fe-4050-af79-c1ee17eb9a6d.jpg"
-            }
-          },
-          "image_HVQTFj": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/Original_08decff5-64d3-4b7f-9d84-2d16ab1bd171.jpg"
-            }
-          },
           "image_ihikKf": {
             "type": "image",
             "settings": {
               "image": "shopify://shop_images/Roasted_Herb___Garlic_3f5f8a8a-496f-42e5-b6be-7e5ce8dbcb2b.jpg"
+            }
+          },
+          "image_zKdtqx": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/Screenshot_2025-09-30_at_1.44.40_PM.png"
             }
           },
           "image_bVEYgU": {
@@ -187,13 +193,14 @@
           }
         },
         "block_order": [
+          "image_ecnjQQ",
           "image_CNXdjY",
+          "image_HVQTFj",
           "image_whCKA6",
           "image_LnHxMC",
           "image_8NQycV",
-          "image_ecnjQQ",
-          "image_HVQTFj",
           "image_ihikKf",
+          "image_zKdtqx",
           "image_bVEYgU",
           "image_NmDnBt",
           "image_YigR77"
