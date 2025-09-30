@@ -1,10 +1,3 @@
-<img
-  height="84"
-  width="84"
-  alt="hand griddled in Boston, MA"
-  src="{{ 'hand-griddled.png' | asset_url }}"
-  class=" absolute w-[84px] rotate left-[36px] top-[30vh] z-50 sm:hidden"
->
 <div class="relative">
   <div class="mt-[45px] flex flex-row h-[calc(100svh-45px-36px)] overflow-x-scroll w-screen sm:relative">
     <div class="flex flex-row " id="marquee">
@@ -18,7 +11,7 @@
       <h3 class="text-heading text-balance text-center sm:text-left">{{ section.settings.hero_title }}</h3>
 
       <a href="{{ settings.instacart_link }}" class="">
-        <div class="flex flex-row gap-1 button mx-auto sm:mx-0 bg-white w-min cursor-pointer">
+        <div class="flex flex-row gap-1 button mx-auto sm:mx-0 sm:bg-white w-min cursor-pointer">
           Order on
           {% render 'instacart' %}
         </div>
@@ -28,7 +21,7 @@
         width="72"
         alt="hand griddled in Boston, MA"
         src="{{ 'hand-griddled.png' | asset_url }}"
-        class=" hidden sm:block absolute w-[72px] rotate left-0 sm:left-[unset]  top-0 sm:top-[-24px]  sm:!right-[-24px]"
+        class=" absolute w-[72px] rotate left-[unset]  top-[-24px] right-1 sm:!right-[-24px]"
       >
     </div>
   </div>
