@@ -108,11 +108,7 @@
             }
           }
         },
-        "block_order": [
-          "press_fCVBb3",
-          "press_LGDcph",
-          "press_QjzC9z"
-        ],
+        "block_order": ["press_fCVBb3", "press_LGDcph", "press_QjzC9z"],
         "settings": {}
       },
       "footer": {
@@ -199,7 +195,7 @@
           "image_YigR77"
         ],
         "settings": {
-          "hero_title": "The New England-style English Muffin"
+          "hero_title": "The New England Style English Muffin"
         }
       },
       "flavors": {

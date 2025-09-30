@@ -10,7 +10,7 @@
     <a href="#location" class="button bg-skillet !hidden sm:!flex">Find Us</a>
 
     <a
-      class="button bg-white !flex"
+      class="button bg-skillet sm:bg-white !flex"
       target="_blank"
       href="{{settings.instacart_link}}"
       >Order Now</a
@@ -51,7 +51,7 @@
         });
         updateHeaderVisibility();
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (window.innerWidth < 640) {
