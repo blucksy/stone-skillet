@@ -4,17 +4,13 @@
     {% comment %} menu with drop down {% endcomment %}
     {% for link in linklists['footer-1'].links %}
       <div class="col-span-5 md:col-span-3 flex flex-col gap-[12px]">
-        {% if link.links.size > 0 %}
-          <ul class="flex flex-col gap-[8px]">
-            {% for sublink in link.links %}
-              <li>
-                <a href="{{ sublink.url }}" class="hover:underline text-link">{{ sublink.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <a href="{{ link.url }}" class="hover:underline">{{ link.title }}</a>
-        {% endif %}
+        <ul class="flex flex-col gap-[8px]">
+          {% for sublink in link.links %}
+            <li>
+              <a href="{{ sublink.url }}" class="hover:underline text-link">{{ sublink.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     {% endfor %}
     <div class="col-span-12 sm:col-span-6">
