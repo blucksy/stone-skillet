@@ -74,6 +74,15 @@
               "username": "@steph_lau",
               "username_link": "https://www.instagram.com/stephh_lau/"
             }
+          },
+          "image_xdyVYK": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/lastcallbaking_1760215490_3741281157624504766_39007914238.jpg",
+              "caption": "Egg, miso bacon, and cheese.",
+              "username": "@lastcallbaking",
+              "username_link": "https://www.instagram.com/stephh_lau/"
+            }
           }
         },
         "block_order": [
@@ -82,7 +91,8 @@
           "image_ezihEB",
           "image_hnRQDR",
           "image_hcNhLV",
-          "image_9M6CXC"
+          "image_9M6CXC",
+          "image_xdyVYK"
         ],
         "settings": {
           "title": "The Dynamic English Muffin"
