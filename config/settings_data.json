@@ -39,13 +39,13 @@
               "username_link": "https://www.instagram.com/p/DOXFR-EDpDQ/?img_index=5"
             }
           },
-          "image_ezihEB": {
+          "image_xdyVYK": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/stone_and_skillet_1755185463_3699086235936091023_1126997061.jpg",
-              "caption": "Panzanella salad.",
-              "username": "@eats.w.ab",
-              "username_link": "https://www.instagram.com/eats.w.ab/"
+              "image": "shopify://shop_images/lastcallbaking_1760215490_3741281157624504766_39007914238.jpg",
+              "caption": "Egg, miso bacon, and cheese.",
+              "username": "@lastcallbaking",
+              "username_link": "https://www.instagram.com/stephh_lau/"
             }
           },
           "image_hnRQDR": {
@@ -54,6 +54,15 @@
               "image": "shopify://shop_images/elizabeth_andherfood_1758925261_3730457929813413775_53159867735.jpg",
               "caption": "Smoked salmon, red onion, cream cheese.",
               "username": "@elizabeth_andherfood",
+              "username_link": "https://www.instagram.com/p/DPFP7jsEU-P/"
+            }
+          },
+          "image_yMxLdr": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/awhiskandaspoon_1755272900_3699819707772518002_13415763.jpg",
+              "caption": "Tender herbs & a jammy egg.",
+              "username": "@awhiskandaspoon",
               "username_link": "https://www.instagram.com/p/DPFP7jsEU-P/"
             }
           },
@@ -66,6 +75,15 @@
               "username_link": "https://www.instagram.com/stephh_lau/"
             }
           },
+          "image_ezihEB": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/stone_and_skillet_1755185463_3699086235936091023_1126997061.jpg",
+              "caption": "Panzanella salad.",
+              "username": "@eats.w.ab",
+              "username_link": "https://www.instagram.com/eats.w.ab/"
+            }
+          },
           "image_9M6CXC": {
             "type": "image",
             "settings": {
@@ -74,25 +92,17 @@
               "username": "@steph_lau",
               "username_link": "https://www.instagram.com/stephh_lau/"
             }
-          },
-          "image_xdyVYK": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/lastcallbaking_1760215490_3741281157624504766_39007914238.jpg",
-              "caption": "Egg, miso bacon, and cheese.",
-              "username": "@lastcallbaking",
-              "username_link": "https://www.instagram.com/stephh_lau/"
-            }
           }
         },
         "block_order": [
           "image_WjMHcy",
           "image_GKVBFR",
-          "image_ezihEB",
+          "image_xdyVYK",
           "image_hnRQDR",
+          "image_yMxLdr",
           "image_hcNhLV",
-          "image_9M6CXC",
-          "image_xdyVYK"
+          "image_ezihEB",
+          "image_9M6CXC"
         ],
         "settings": {
           "title": "The Dynamic English Muffin"
