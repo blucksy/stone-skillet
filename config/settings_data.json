@@ -65,6 +65,15 @@
               "username": "@steph_lau",
               "username_link": "https://www.instagram.com/stephh_lau/"
             }
+          },
+          "image_9M6CXC": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/stone_and_skillet_1748975380_3646992278129622166_1126997061.jpg",
+              "caption": "A tuna melt.",
+              "username": "@steph_lau",
+              "username_link": "https://www.instagram.com/stephh_lau/"
+            }
           }
         },
         "block_order": [
@@ -72,7 +81,8 @@
           "image_GKVBFR",
           "image_ezihEB",
           "image_hnRQDR",
-          "image_hcNhLV"
+          "image_hcNhLV",
+          "image_9M6CXC"
         ],
         "settings": {
           "title": "The Dynamic English Muffin"
